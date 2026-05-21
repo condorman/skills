@@ -1,94 +1,152 @@
 ---
-name: codeigniter
-description: Build high-performance PHP web applications using CodeIgniter 4. This skill covers MVC architecture, RESTful routing, database modeling with Entities and Models, built-in library usage, helper functions, and robust testing frameworks. Ideal for developing scalable APIs and monolithic web apps with a small footprint.
+name: codeigniter-knowledge
+description: CodeIgniter 4 framework knowledge base. Provides CI4 MVC architecture, DDD integration, persistence, services, security (Shield auth, Filters authorization, CSRF), event system, queue (codeigniter4/queue jobs, workers, retry), infrastructure components (cache, HTTP client, email, throttler), testing, and antipatterns for CodeIgniter PHP projects.
 ---
 
-CodeIgniter 4 is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications.
+# CodeIgniter Knowledge Base
 
-Official Documentation: https://codeigniter.com/user_guide/index.html
+Quick reference for CodeIgniter 4 framework patterns and PHP implementation guidelines. CodeIgniter 4 is a complete rewrite of the framework, built for PHP 8.1+ with namespaces, autoloading, and a modern MVC architecture. It remains lightweight and fast while providing the tools needed for professional application development. This knowledge base is up to date with CodeIgniter [v4.7.2](https://www.codeigniter.com/user_guide/changelogs/v4.7.2.html).
 
-| Topic | Docs URL | Use for |
-|-------|----------|---------|
-| Installation | [Installation](https://codeigniter.com/user_guide/installation/index.html) | Project setup, Composer, manual install |
-| Controllers | [Controllers](https://codeigniter.com/user_guide/incoming/controllers.html) | Handling incoming requests, logic flow |
-| Routing | [URI Routing](https://codeigniter.com/user_guide/incoming/routing.html) | Mapping URLs to controllers/methods |
-| Models | [Modeling Data](https://codeigniter.com/user_guide/models/index.html) | Database interaction, Entities, Validation |
-| Libraries | [Library Reference](https://codeigniter.com/user_guide/libraries/index.html) | Sessions, Validation, CURLRequest, etc. |
-| Helpers | [Helpers](https://codeigniter.com/user_guide/helpers/index.html) | Procedural utility functions (URL, Array, Text) |
-| Testing | [Testing](https://codeigniter.com/user_guide/testing/index.html) | Unit, Feature, and Database testing |
+## Core Principles
 
-## Capabilities
-- **MVC Architecture** — Clear separation of logic, data, and presentation.
-- **RESTful Routing** — Powerful and flexible routing for APIs and web pages.
-- **Database Abstraction** — Query Builder and Model-based ORM with Entity support.
-- **Form Validation** — Robust data validation with custom rules.
-- **Security** — Built-in CSRF, XSS protection, and secure session management.
-- **Testing Framework** — Deep integration with PHPUnit for unit and integration tests.
-- **CLI Support** — `spark` command-line tool for scaffolding and maintenance.
-- **Caching** — Support for multiple caching backends (File, Redis, Memcached).
+### MVC Architecture
 
-## Quick Setup
-```bash
-# Install via Composer
-composer create-project codeigniter4/appstarter my-project
-
-# Start development server
-php spark serve
+```
+Request → index.php → Bootstrap → Routing
+  → Filters (before) → Controller → Service/Model → View
+  → Filters (after) → Response
 ```
 
-## Controller Example
+**Key principles:**
+- Lightweight core with minimal overhead
+- HMVC-capable via modules (app/Modules/)
+- Services container for dependency management
+- Filters as middleware equivalent
+- Entity classes for data hydration
+
+## Quick Checklists
+
+### DDD-Compatible CI4 Project
+
+- [ ] Domain logic extracted from Models into Domain layer
+- [ ] Repository interfaces defined in Domain, implemented in Infrastructure
+- [ ] Value Objects used instead of primitive types for domain concepts
+- [ ] CI4 Models used only as persistence adapters
+- [ ] Services registered in Config\Services for dependency injection
+- [ ] Business rules not in Controllers or Filters
+- [ ] Domain Events dispatched through domain `EventDispatcherInterface` port (not CI4 Events directly)
+- [ ] Input validation at Controller level (not in Domain)
+- [ ] Shield Groups/Permissions used only at Filter/Route level; Domain uses Specifications
+- [ ] Queue job handlers delegate to Application UseCases
+- [ ] Infrastructure components (Cache, HTTP Client, Email) accessed via domain ports
+
+### Clean Architecture Checks
+
+- [ ] No `use CodeIgniter\...` in Domain layer
+- [ ] No direct database access outside Repository implementations
+- [ ] Controllers delegate to Application Services / Use Cases
+- [ ] DTOs used for cross-layer data transfer
+- [ ] Config\Services wires interfaces to implementations
+- [ ] Entities are framework-free domain objects (not CI4 Entity)
+
+## Common Violations Quick Reference
+
+| Violation | Where to Look | Severity |
+|-----------|---------------|----------|
+| Business logic in Controller | `app/Controllers/*.php` | Critical |
+| Domain depends on CI4 framework | `use CodeIgniter\` in Domain classes | Critical |
+| Direct DB queries in Controller | `$this->db->` in Controllers | Critical |
+| Model contains business rules | Complex `if/switch` in Model methods | Warning |
+| Missing input validation | Controllers without `$this->validate()` | Warning |
+| God Controller | Controllers > 300 lines | Warning |
+| Shield UserIdentity in Domain | `use CodeIgniter\Shield` in Domain layer | Critical |
+| Queue in Domain | `service('queue')` in Domain layer | Critical |
+| Cache/HTTP Client in Domain | `CacheInterface` or `CURLRequest` in Domain | Critical |
+| Missing queue resilience | Jobs without `$retryAfter`/`$tries` | Warning |
+| Hardcoded config values | Magic strings instead of `config()` | Info |
+
+## PHP 8.4 CodeIgniter Patterns
+
+### Controller (Thin, Delegates to Service)
+
 ```php
 <?php
+declare(strict_types=1);
+namespace App\Controllers\Api;
 
-namespace App\Controllers;
+use App\Controllers\BaseController;
+use CodeIgniter\HTTP\ResponseInterface;
 
-use CodeIgniter\Controller;
-
-class Home extends Controller
+final class OrderController extends BaseController
 {
-    public function index()
+    public function __construct(
+        private readonly OrderService $orderService,
+    ) {}
+
+    public function show(string $id): ResponseInterface
     {
-        return view('welcome_message');
+        $order = $this->orderService->findById($id);
+        return $this->response->setJSON(['id' => $order->id, 'status' => $order->status->value]);
     }
 }
 ```
 
-## Routing Example
+### Service (Application Layer)
+
 ```php
-// app/Config/Routes.php
-$routes->get('/', 'Home::index');
-$routes->resource('photos'); // RESTful resource
+<?php
+declare(strict_types=1);
+namespace App\Services;
+
+final readonly class OrderService
+{
+    public function __construct(
+        private OrderRepositoryInterface $orders,
+        private EventDispatcherInterface $events,
+    ) {}
+
+    public function confirm(string $orderId): void
+    {
+        $order = $this->orders->findById($orderId)
+            ?? throw new OrderNotFoundException($orderId);
+        $order->confirm();
+        $this->orders->save($order);
+        $this->events->dispatch(new OrderConfirmedEvent($order->id()));
+    }
+}
 ```
 
-## Model & Entity Example
+### Model as Repository Adapter
+
 ```php
-// app/Models/UserModel.php
+<?php
+declare(strict_types=1);
 namespace App\Models;
+
 use CodeIgniter\Model;
 
-class UserModel extends Model
+final class OrderModel extends Model
 {
-    protected $table = 'users';
-    protected $returnType = \App\Entities\User::class;
-    protected $allowedFields = ['name', 'email'];
-}
-
-// app/Entities/User.php
-namespace App\Entities;
-use CodeIgniter\Entity\Entity;
-
-class User extends Entity
-{
-    protected $datamap = [];
+    protected $table         = 'orders';
+    protected $primaryKey    = 'id';
+    protected $returnType    = OrderEntity::class;
+    protected $allowedFields = ['customer_id', 'status', 'total', 'notes'];
+    protected $useTimestamps = true;
 }
 ```
 
-## Reference Documentation
-- **[references/installation.md](references/installation.md)** — Project setup and environment configuration.
-- **[references/controllers-and-routing.md](references/controllers-and-routing.md)** — Request handling and URI mapping.
-- **[references/models.md](references/models.md)** — Data modeling, Entities, and database operations.
-- **[references/libraries.md](references/libraries.md)** — Core system libraries and drivers.
-- **[references/helpers.md](references/helpers.md)** — Utility functions and procedural tools.
-- **[references/testing.md](references/testing.md)** — Quality assurance and testing strategies.
-- **[references/cli.md](references/cli.md)** — Command-line interface and spark tools.
-- **[references/extending.md](references/extending.md)** — Customizing core behavior and extending functionality.
+## References
+
+For detailed information, load these reference files:
+
+- `references/architecture.md` -- CI4 MVC structure, modules, directory layout
+- `references/ddd-integration.md` -- Domain extraction, Repository pattern, Value Objects in CI4
+- `references/routing-http.md` -- Controllers, Filters, RESTful routing, validation
+- `references/persistence.md` -- CI4 Model, Query Builder, Entity classes, migrations
+- `references/dependency-injection.md` -- Services class, custom registration, DI patterns
+- `references/testing.md` -- CIUnitTestCase, DatabaseTestTrait, feature testing, mocking
+- `references/security.md` -- Shield authentication/authorization, Filters, CSRF, password hashing with DDD
+- `references/event-system.md` -- CI4 Events, domain event dispatching, lifecycle events, testing
+- `references/queue.md` -- codeigniter4/queue jobs, workers, retry, chained jobs, queue events with DDD
+- `references/infrastructure-components.md` -- Cache, CURLRequest HTTP client, Email, Throttler with DDD ports
+- `references/antipatterns.md` -- Common violations with detection patterns and fixes
