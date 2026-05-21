@@ -1,9 +1,9 @@
 ---
-name: codeigniter-knowledge
+name: codeigniter
 description: CodeIgniter 4 framework knowledge base. Provides CI4 MVC architecture, DDD integration, persistence, services, security (Shield auth, Filters authorization, CSRF), event system, queue (codeigniter4/queue jobs, workers, retry), infrastructure components (cache, HTTP client, email, throttler), testing, and antipatterns for CodeIgniter PHP projects.
 ---
 
-# CodeIgniter Knowledge Base
+# CodeIgniter
 
 Quick reference for CodeIgniter 4 framework patterns and PHP implementation guidelines. CodeIgniter 4 is a complete rewrite of the framework, built for PHP 8.1+ with namespaces, autoloading, and a modern MVC architecture. It remains lightweight and fast while providing the tools needed for professional application development. This knowledge base is up to date with CodeIgniter [v4.7.2](https://www.codeigniter.com/user_guide/changelogs/v4.7.2.html).
 
