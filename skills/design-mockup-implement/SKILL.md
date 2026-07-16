@@ -48,9 +48,10 @@ disponibili. Fai fuzzy-match tra il riferimento dell'utente (es.
 Per ogni file/frame candidato — **anche con un solo match ad alta
 confidenza** — recupera un estratto rilevante via `DesignSync(get_file)`
 (titolo/heading/prime righe significative) e mostralo all'utente insieme
-al path esatto. Se ci sono più candidati plausibili (nome ambiguo, più
+al path esatto. **Se possibile, genera e mostra all'utente anche l'immagine/screenshot**
+di quanto identificato, oltre al dettaglio testuale. Se ci sono più candidati plausibili (nome ambiguo, più
 frame simili, presente sia nel bundle redesign sia nello stato attuale),
-mostra tutti gli estratti fianco a fianco con `AskUserQuestion` e fai
+mostra tutti gli estratti (e relative immagini, se disponibili) fianco a fianco con `AskUserQuestion` e fai
 scegliere quello corretto.
 
 **Non passare mai al punto 4 senza una conferma esplicita dell'utente**
