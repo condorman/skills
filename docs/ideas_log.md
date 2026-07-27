@@ -21,6 +21,7 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Novelty**: Novel Combination (Tactile Magnet Physics + Roguelite Arcade Chain Reactions)
 - **5-Proof Score**: 5/5
 - **Status**: **APPROVED**
+- **Detailed Report**: [chaincraft_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/chaincraft_evaluation_report.md)
 - **Summary**: Tactile 2D magnet physics game where players drag a magnetic core to build massive marble whips, triggering explosive chain reactions against boss waves. Designed for high TikTok/Reels viral clip reach and multi-session endless replayability (no 1-play-per-day limits).
 
 ### 2. 💡 ChargeShield AI: Automated Multimodal Dispute & Chargeback Evidence Generator
