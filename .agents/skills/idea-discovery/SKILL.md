@@ -115,6 +115,9 @@ Every candidate idea MUST be evaluated against all 5 Proofs:
 
 - **Solopreneur + AI Feasibility Gate**: Must be buildable, operate-able, and supportable by 1 person with AI tools.
 - **Zero / Ultra-Low Legal Risk Gate**: Absolute independence from regulatory bodies (FDA, SEC, FINRA, MiCA), medical advice, gambling, or legal consultation requirements.
+- **Game Ideas Directive (Mandatory for Gaming Concepts)**:
+  - **DO NOT** propose "daily-only" micro-games by default (where the user plays once a day for 2 minutes and cannot play again).
+  - **ALWAYS PRIORITIZE** games with **High Organic Virality** (mechanics that generate clip-worthy TikTok/Reels/Shorts visuals or social challenges) AND **Multi-Session Replayability** (endless modes, roguelite progression, physics merge loops, or instant retry mechanics that encourage playing multiple times a day).
 
 ---
 

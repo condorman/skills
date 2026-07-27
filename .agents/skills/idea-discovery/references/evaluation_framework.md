@@ -37,10 +37,11 @@ Every idea MUST pass all 5 verification proofs to receive an **APPROVED** status
 - **Verdict**: If customer acquisition requires paid ads, enterprise sales teams, or cold outreach, **REJECT (Distribution Failure)**.
 
 ### Proof 3: High Frequency & Retention (Anti-Churn Test)
-- **Criterion**: The product MUST solve a recurring daily or weekly workflow pain point—not a one-off event.
+- **Criterion**: The product MUST solve a recurring daily or weekly workflow pain point—not a one-off event. For **Game Concepts**, avoid "daily-only" 2-minute puzzles; mandate high multi-session replayability (endless modes, roguelite progression, physics merge loops).
 - **Frequency Scale**:
   - *Daily/Weekly Recurring*: Invoicing, social media curation, weekly report generation, daily code review summary -> **PASS**.
-  - *One-off / Rare Event*: Resume formatting, wedding planner tool, domain name generator -> **REJECT (High Churn Risk)**.
+  - *Multi-Session Games*: Highly replayable physics, roguelite merges, high-score arcade loops -> **PASS**.
+  - *One-off / Rare Event / Single-Play-Per-Day*: Resume formatting, single-daily Wordle clones with no replay mode -> **REJECT (High Churn Risk / Low Engagement)**.
 
 ### Proof 4: AI Technical Reliability & Low-Support Threshold
 - **Criterion**: The core AI/automation pipeline MUST deliver >95% deterministic accuracy without requiring human-in-the-loop debugging or manual customer support intervention.
