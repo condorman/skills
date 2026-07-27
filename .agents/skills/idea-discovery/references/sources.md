@@ -1,6 +1,6 @@
-# Comprehensive Directory of Portals, Forums & Platforms for Idea Discovery
+# Master Directory of Portals, Forums & Platforms for Idea Discovery
 
-This reference document acts as an exhaustive catalog of portals, databases, forums, public roadmap platforms, AI registries, and research dorks used by the `idea-discovery` skill to find **original, unprecedented, and unserved product ideas**.
+This reference document acts as an exhaustive catalog of portals, databases, marketplaces, newsletters, forums, public roadmap platforms, AI registries, and research dorks used by the `idea-discovery` skill to find **original, unprecedented, and unserved product ideas**.
 
 ---
 
@@ -12,18 +12,40 @@ Dedicated platforms that analyze market gaps, search volume data, and user compl
 - **[StartupIdeasDB](https://startupideasdb.com/)**: Thousands of validated problem statements mined directly from Reddit, X, and App Store complaints.
 - **[Ideabrowser](https://ideabrowser.com/)**: Data-driven tool surfacing startup opportunities by analyzing trending keywords and unserved search queries.
 - **[Micro SaaS Ideas](https://microsaasidea.com/)**: Newsletter & database of niche micro-SaaS opportunities broken down by target market and build difficulty.
+- **[SoftwareIdeas.io](https://softwareideas.io/)**: In-depth newsletter analyzing pre-validated software niches and unserved market gaps.
 - **[Build The Keyword](https://buildthekeyword.com/)**: Uncovers micro-SaaS ideas based on exact unfulfilled Google search volume data.
 
 ---
 
-## 2. Community Friction & "Problem Hunting" Forums
+## 2. Micro-Acquisition & Side-Project Marketplaces (Inspect Unfinished Projects)
+
+Platforms where developers sell small side projects, abandoned micro-SaaS, or micro-businesses. Excellent for finding validated concepts that need better UX, modern AI integration, or pivot angles:
+
+- **[Microns.io](https://microns.io/)**: Marketplace for micro-startups and micro-SaaS projects (typically under $100K).
+- **[SideProjectors](https://www.sideprojectors.com/)**: Free community marketplace to buy, sell, or inspect side projects and unmaintained tools.
+- **[Acquire.com](https://acquire.com/)**: Premier marketplace for micro-SaaS listings; inspect revenue-generating niches.
+- **[Flippa](https://flippa.com/)**: Database of digital assets and starter websites for sale.
+
+---
+
+## 3. Micro-Trend Analytics & Early Search Signals
+
+Find exploding search volume and rising consumer/business queries before they reach mainstream awareness:
+
+- **[MeetGlimpse](https://meetglimpse.com/)**: Google Trends integration that identifies fast-rising search queries and emerging micro-niches 3-6 months before competitors.
+- **[Exploding Topics](https://explodingtopics.com/)**: Surfaces exploding business, SaaS, and consumer trends.
+- **[Trends.vc](https://trends.vc/)**: Detailed research reports on emerging micro-markets.
+
+---
+
+## 4. Community Friction & "Problem Hunting" Forums
 
 Active communities where users directly request tools or complain about manual workflows:
 
 ### Reddit Subreddits
 - **[r/SomebodyMakeThis](https://www.reddit.com/r/SomebodyMakeThis/)**: Explicit requests from users asking developers to build specific apps/tools.
 - **[r/StartupIdeas](https://www.reddit.com/r/Startup_Ideas/)** & **[r/AppIdeas](https://www.reddit.com/r/AppIdeas/)**: Raw community-submitted ideas and problem discussions.
-- **[r/MicroSaaS](https://www.reddit.com/r/MicroSaaS/)** & **[r/SaaS](https://www.reddit.com/r/SaaS/)**: Discussions on micro-SaaS niches, underserved markets, and founder validation.
+- **[r/MicroSaaS](https://www.reddit.com/r/MicroSaaS/)** & **[r/SaaS](https://www.reddit.com/r/SaaS/)**: Discussions on micro-SaaS niches, unserved markets, and founder validation.
 - **[r/Automation](https://www.reddit.com/r/Automation/)**, **[r/n8n](https://www.reddit.com/r/n8n/)**, **[r/Make](https://www.reddit.com/r/Make/)**, **[r/Zapier](https://www.reddit.com/r/Zapier/)**: Complex user-built workarounds indicating a demand for a simple, single-click dedicated tool.
 - **[r/excel](https://www.reddit.com/r/excel/)** & **[r/google_sheets](https://www.reddit.com/r/googlesheets/)**: Users begging for ways to automate complex manual spreadsheet processes.
 
@@ -33,7 +55,7 @@ Active communities where users directly request tools or complain about manual w
 
 ---
 
-## 3. Public Feature Request Boards & Roadmaps (Mining Competitor Gaps)
+## 5. Public Feature Request Boards & Roadmaps (Mining Competitor Gaps)
 
 Platforms where users post and vote on missing features for existing software. If a feature request has 100+ upvotes and the vendor hasn't built it in 2 years, it is a prime candidate for a standalone micro-app.
 
@@ -44,7 +66,7 @@ Platforms where users post and vote on missing features for existing software. I
 
 ---
 
-## 4. AI Tool Registries & Launchpad Radar
+## 6. AI Tool Registries & Launchpad Radar
 
 Monitor emerging launches to identify gaps, missing features, or vertical adaptations:
 
@@ -56,17 +78,7 @@ Monitor emerging launches to identify gaps, missing features, or vertical adapta
 
 ---
 
-## 5. Investor Wishlists & Market Intelligence
-
-High-level industry reports on unaddressed problems:
-
-- **[Y Combinator Request for Startups (RFS)](https://www.ycombinator.com/rfs)**: Sectors and specific technical problems top VC investors actively want founders to build.
-- **[Trends.vc](https://trends.vc/)**: In-depth reports on emerging micro-markets and business models.
-- **[CB Insights](https://www.cbinsights.com/)**: Deep-dive market intelligence on industry gaps.
-
----
-
-## 6. Freelance Job Boards (Contract Workaround Mining)
+## 7. Freelance Job Boards (Contract Workaround Mining)
 
 When companies can't find software to solve a problem, they post jobs paying freelancers to build custom scripts or handle tasks manually.
 
@@ -79,18 +91,19 @@ When companies can't find software to solve a problem, they post jobs paying fre
 
 ---
 
-## 7. Review Sites & Negative Review Scrapers
+## 8. Review Sites, AppSumo & Negative Review Scrapers
 
 Filter for 1, 2, and 3-star reviews to find exact complaints about incumbents (e.g. "too bloated", "too expensive", "clunky export", "lacks mobile UX"):
 
+- **[AppSumo Reviews](https://appsumo.com/)**: Filter lifetime deal launches for 1-3 star reviews to see what early adopters complain about in new software.
+- **Chrome Web Store Reviews**: Great for finding extension ideas where existing extensions are broken or abandoned.
 - **[G2](https://www.g2.com/)** & **[Capterra](https://www.capterra.com/)**: B2B software reviews.
 - **[Trustpilot](https://www.trustpilot.com/)**: Consumer and B2B service feedback.
-- **Chrome Web Store Reviews**: Great for finding extension ideas where existing extensions are broken or abandoned.
 - **App Store & Google Play Reviews**.
 
 ---
 
-## 8. Advanced Deep Research Google Dorks
+## 9. Advanced Deep Research Google Dorks
 
 Use these Google search queries to uncover hidden discussions:
 
