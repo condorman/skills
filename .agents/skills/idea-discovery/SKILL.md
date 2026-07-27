@@ -81,33 +81,43 @@ Focus discovery on **three pillars**:
 
 ## Step 2: Prior-Art & Novelty Verification Protocol
 
-Before declaring an idea "unprecedented", run a **3-pass verification search**:
+Consult `references/deep_search_playbook.md` for vertical Dorks, mechanics-first isolation, patent registries, and Asian market queries.
 
-- **Pass 1: Direct Keyword Search**: Google `"[Core Mechanism] app OR tool OR software"`.
-- **Pass 2: Ecosystem & Repo Search**: Search Product Hunt, GitHub, BetaList, and Hacker News Show HN.
-- **Pass 3: Failed Predecessor Analysis**:
-  - If a similar product existed and died, analyze *why* it failed.
-  - If it failed because the tech wasn't ready (e.g., pre-LLM era), but modern AI solves the core bottleneck effortlessly, classify as **Greenlit under "Why Now" Flank Strategy**.
-  - If an active identical product already exists with high adoption, classify as **Prior Art Exists** and evaluate under Filter 3 (Competitor Matrix).
+Before starting search execution, run the search payload miner script:
+```bash
+python scripts/deep_search_miner.py "<core_mechanics_term>"
+```
+
+Run a **5-pass verification search**:
+
+- **Pass 1: Mechanics-First Isolation Search**: Abstract the concept into its raw game/UX loop (ignoring graphics/theme) and search across vertical platforms (App Store, SteamDB, GitHub, Chrome Web Store).
+- **Pass 2: Direct Keyword & Ecosystem Search**: Google Dorks on Product Hunt, GitHub topics, BetaList, Hacker News, and Canny boards.
+- **Pass 3: Cross-Language & Regional Verification**: Search Asian markets (BOOTH/DLsite for JP, WeChat/Xiaohongshu for CN) using translated core mechanics keywords.
+- **Pass 4: Patent & Academic IP Audit**: Search Google Patents (`patents.google.com`) and arXiv/SIGGRAPH for deep-tech algorithms, novel game physics/rendering shaders, or patented workflow methods.
+- **Pass 5: Failed Predecessor & Feature Delta Audit**:
+  - Analyze why dead predecessors failed (e.g. pre-LLM technology bottleneck vs low demand).
+  - Construct a **Feature Delta Matrix** comparing the candidate idea against the 2 closest prior-art solutions.
+  - Require an **Evidence Audit Log** listing verified query strings and real URLs examined.
 
 ---
 
-## Step 3: Anti-False-Positive 5-Proof Verification Protocol
+## Step 3: Anti-False-Positive 6-Proof Verification Protocol
 
 Consult `references/evaluation_framework.md` for complete guidelines and scoring matrices.
 
-Every candidate idea MUST be evaluated against all 5 Proofs:
+Every candidate idea MUST be evaluated against all 6 Proofs:
 
-1. **Proof 1: Willingness to Pay (WTP)**: Prove that users or companies are currently spending real money (on freelancers, competitor software, or manual workarounds) to solve this pain point.
+1. **Proof 1: Willingness to Pay & Demand Velocity (WTP & Trends)**: Prove that users or companies are currently spending real money (on freelancers, competitor software, or manual workarounds) AND search volume momentum is rising/active.
 2. **Proof 2: Zero-CAC Organic Distribution**: Identify a specific, unpaid organic channel (Chrome Web Store SEO, pSEO, template marketplace, active niche community) to acquire users without paid ads.
 3. **Proof 3: High Frequency & Retention (Anti-Churn)**: Ensure the tool solves a daily or weekly recurring task—not a one-time utility.
 4. **Proof 4: AI Technical Reliability**: Verify that the AI pipeline achieves >95% accuracy without requiring human-in-the-loop debugging or overwhelming 1 person with support tickets.
 5. **Proof 5: Micro-Moat Defensibility**: Define a unique advantage (niche prompt workflow, complex API integrations, SEO lock-in) that prevents instant 1-day cloning by generic AI wrappers.
+6. **Proof 6: Status Quo Resistance (Non-Software Substitute Test)**: Prove that the app saves >2 hours/week or $200+/month compared to free human inertia (paper, spreadsheet, pinned WhatsApp message).
 
 **Scoring**:
-- **5/5 Proofs Passed**: **APPROVED**
-- **4/5 Proofs Passed**: **PIVOT REQUIRED** (Identify and fix the missing proof)
-- **≤3/5 Proofs Passed**: **DISCARDED** (Eliminated as a False Positive)
+- **6/6 Proofs Passed**: **APPROVED**
+- **5/6 Proofs Passed**: **PIVOT REQUIRED** (Identify and fix the missing proof)
+- **≤4/6 Proofs Passed**: **DISCARDED** (Eliminated as a False Positive)
 
 ---
 
@@ -140,16 +150,30 @@ For every validated original idea, present the report in this exact format:
 - **Why It Couldn't Be Built Earlier**: [What bottleneck was eliminated]
 
 #### 3. Novelty & Prior-Art Verification
-- **Prior-Art Search Results**: [Findings from 3-pass search]
+- **Prior-Art Search Results**: [Findings from 5-pass search]
 - **Originality Verdict**: [Confirmed Original / Flanking Existing Competitor]
 
-#### 4. Anti-False-Positive 5-Proof Verification Matrix
-- **Proof 1 (Willingness to Pay)**: [PASS / FAIL + Evidence]
+##### 3.1 Feature Delta Matrix
+| Feature / Dimension | Candidate Concept | Closest Prior Art #1 | Closest Prior Art #2 | Innovation Delta / Verdict |
+|---|---|---|---|---|
+| **Core Mechanics** | [Description] | [Description] | [Description] | [🟢 Novel / 🟡 Reskin] |
+| **Distribution** | [Zero-CAC Channel] | [Channel] | [Channel] | [🟢 Advantage / 🔴 Saturated] |
+| **Tech Enabler** | [Tech] | [Tech] | [Tech] | [🟢 Breakthrough / 🔴 Stale] |
+
+##### 3.2 Evidence & Verification Audit Log
+- **Dorks / Queries Run**: `[query string 1]`, `[query string 2]`
+- **Verified URLs Examined**:
+  - [App / Tool / Patent 1 Name](url_1) - *Findings summary*
+  - [App / Tool / Patent 2 Name](url_2) - *Findings summary*
+
+#### 4. Anti-False-Positive 6-Proof Verification Matrix
+- **Proof 1 (Willingness to Pay & Demand Velocity)**: [PASS / FAIL + Evidence]
 - **Proof 2 (Zero-CAC Distribution)**: [PASS / FAIL + Specific Channel]
 - **Proof 3 (Anti-Churn Retention)**: [PASS / FAIL + Frequency Rate]
 - **Proof 4 (AI Reliability >95%)**: [PASS / FAIL + Risk Mitigation]
 - **Proof 5 (Micro-Moat)**: [PASS / FAIL + Defensibility Factor]
-- **Protocol Score**: [5/5 -> APPROVED]
+- **Proof 6 (Status Quo Resistance)**: [PASS / FAIL + Non-Software Inertia Check]
+- **Protocol Score**: [6/6 -> APPROVED]
 
 #### 5. Solopreneur + AI Feasibility Stack
 - **Recommended Tech Stack**: [e.g. Next.js / Vite + Tailwind + LLM/Vision API + Supabase]
@@ -165,18 +189,21 @@ For every validated original idea, present the report in this exact format:
 - **Value Proposition**: [Clear ROI for buyer]
 
 #### 8. Summary Recommendation
-- **Status**: [APPROVED]
+- **Status**: [APPROVED / PIVOT REQUIRED / DISCARDED]
 ```
 
 ---
 
 ## Step 6: Memory Logging
 
-Update `<target_project>/docs/ideas_log.md` with every analyzed idea (both Approved and Discarded) including the **Novelty Factor**, **5-Proof Score**, and **Rejection Reason** to prevent redundant research in future sessions.
+Update `<target_project>/docs/ideas_log.md` with every analyzed idea (both Approved and Discarded) including the **Novelty Factor**, **6-Proof Score**, and **Rejection Reason** to prevent redundant research in future sessions.
 
 ---
 
 ## References
 
 - [sources.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/sources.md): Deep research search operators, portals, marketplaces, and dorks.
-- [evaluation_framework.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/evaluation_framework.md): Detailed 5-Proof verification protocol against false positives.
+- [deep_search_playbook.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/deep_search_playbook.md): Vertical search Dorks, Mechanics-First isolation, Asian market queries, Patent search, Status Quo inertia test, Feature Delta Matrix, and Evidence Audit Log rules.
+- [evaluation_framework.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/evaluation_framework.md): Detailed 6-Proof verification protocol against false positives.
+
+

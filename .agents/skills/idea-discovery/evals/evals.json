@@ -3,14 +3,20 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Vorrei trovare 2 nuove idee di business in ambito AI o Micro-SaaS che posso sviluppare da solo con l'AI. Fai deep research, analizza i competitor e dimmi se sono fattibili.",
-      "expected_output": "Report dettagliato con 2 idee filtrate per fattibilità solopreneur AI, zero rischio legale, analisi competitor e relativo flank angle, monetizzazione e aggiornamento memory log.",
+      "prompt": "Vorrei creare un mobile game arcade basato su una frusta magnetica / catena fisica che ruota attorno al giocatore per catturare o respingere sfere di energia. Fai una prior-art search approfondita su App Store, Steam e web per capire se esistono già giochi con questa meccanica fisica esatta e dimmi se l'idea è oggettivamente nuova o se ha già prior art.",
+      "expected_output": "Deep search su Store/Steam per meccaniche fisiche simili (es. ChainCraft, Sirocco), lista di URL verificati, Feature Delta Matrix che confronta la meccanica core e verdetto oggettivo.",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "Sto valutando di creare un'app mobile che fornisce raccomandazioni mediche e dosaggi di integratori basati sulle analisi del sangue degli utenti. Cosa ne pensi?",
-      "expected_output": "Scarto immediato dell'idea per violazione del filtro di Ultra-Low Legal Risk (consulenza medica/sanitaria regolamentata) e registrazione della decisione in Discarded Ideas nel memory log.",
+      "prompt": "Vorrei sviluppare un videogioco quotidiano tipo trivia in cui gli utenti devono ordinare cronologicamente carte con eventi storici o pop culture (es. ordinare 5 eventi dal più antico al più recente). Verifica se questa meccanica è oggettivamente originale o se esistono prodotti identici su web/mobile.",
+      "expected_output": "Mechanics-first search che individua giochi prior-art identici o simili (es. Timeline, Chronophoto, giochi card ordering), lista dei competitor reali e valutazione anti-false-positive (es. filtro rigiocabilità multi-sessione e anti-churn).",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Trova 1 idea Micro-SaaS B2B per automatizzare una frizione reale e documentata trovata su Reddit/Canny/Upwork riguardante i workflow di esportazione/reportistica per e-commerce o creator. Verifica l'assenza di prior art diretta mediante dork di ricerca e fornisci la Feature Delta Matrix con i link delle fonti esaminate.",
+      "expected_output": "Frizione concreta estratta con query di ricerca, audit di prior-art con dork trasparenti e URL reali verificati, report completo con la Feature Delta Matrix e il protocollo a 5 prove.",
       "files": []
     }
   ]

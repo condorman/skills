@@ -1,10 +1,10 @@
-# Anti-False-Positive Evaluation Framework (5-Proof Verification Protocol)
+# Anti-False-Positive Evaluation Framework (6-Proof Verification Protocol v3.0)
 
-This document defines the strict, anti-false-positive evaluation criteria designed to eliminate bad ideas early and ensure that only ideas with verified commercial viability, low churn, organic distribution, and high technical reliability are approved.
+This document defines the strict, anti-false-positive evaluation criteria designed to eliminate bad ideas early and ensure that only ideas with verified commercial viability, low churn, organic distribution, high technical reliability, and status-quo resistance are approved.
 
 ---
 
-## The 5 Pitfalls of Idea Evaluation
+## The 6 Pitfalls of Idea Evaluation
 
 | Pitfall | Common Delusion | Real-World Failure Reason |
 |---------|-----------------|---------------------------|
@@ -13,20 +13,21 @@ This document defines the strict, anti-false-positive evaluation criteria design
 | **3. High Churn Trap** | "Solves a real problem (e.g. file conversion)." | User solves the problem once and cancels subscription immediately. |
 | **4. Zero Moat (Commodity Wrapper)** | "It wraps an LLM API nicely." | 20 identical clones appear on Product Hunt within 7 days; base LLMs add the feature for free. |
 | **5. AI Reliability Failure** | "AI will handle 100% of the workflow." | LLM hallucinations or edge-case breaks cause endless support tickets that overwhelm 1 person. |
+| **6. Status Quo Inertia** | "An app is slightly cleaner than Excel or paper." | Users prefer their free manual spreadsheet/paper habit over learning a new software tool. |
 
 ---
 
-## The 5-Proof Verification Protocol
+## The 6-Proof Verification Protocol
 
-Every idea MUST pass all 5 verification proofs to receive an **APPROVED** status.
+Every candidate idea MUST be evaluated against all 6 verification proofs:
 
-### Proof 1: Willingness to Pay (WTP Test)
-- **Criterion**: There MUST be concrete evidence of active financial spend addressing this problem today.
+### Proof 1: Willingness to Pay (WTP & Demand Velocity Test)
+- **Criterion**: There MUST be concrete evidence of active financial spend AND rising search momentum addressing this problem today.
 - **Verification Indicators**:
   - Companies hiring freelancers on Upwork/Fiverr paying $200–$2,000 for this exact custom task.
   - Existing clunky/bloated competitors charging $30+/mo with active paying user reviews.
-  - Active search volume for `"buy [tool name]"` or `"paid alternative to [tool]"`.
-- **Verdict**: If users only complain but never pay for existing workarounds, **REJECT (WTP Failure)**.
+  - Rising Google Trends / Exploding Topics search volume momentum.
+- **Verdict**: If users only complain but never pay for existing workarounds, or search volume is dead/flat for 3+ years, **REJECT (WTP / Dead Demand Failure)**.
 
 ### Proof 2: Zero-CAC Organic Distribution Channel
 - **Criterion**: The product MUST have a clear, built-in organic customer acquisition channel that requires **$0 in ad spend** and no direct cold sales calls.
@@ -58,12 +59,18 @@ Every idea MUST pass all 5 verification proofs to receive an **APPROVED** status
   - **First-Mover SEO / Marketplace Rank**: Dominating search rank in Chrome Store or Google before competitors emerge.
 - **Verdict**: If the tool is a simple 1-prompt API wrapper with standard UI, **REJECT (Zero Moat)**.
 
+### Proof 6: Status Quo Resistance & Non-Software Substitute Test
+- **Criterion**: The proposed software MUST overcome free human inertia (spreadsheets, paper, pinned notes, basic email).
+- **Checklist**:
+  - Does the app save at least 2+ hours per week or $200+/month compared to a free spreadsheet or manual routine?
+- **Verdict**: If the user's free manual habit is "good enough" (<60s effort), **REJECT (Status Quo Inertia Failure)**.
+
 ---
 
 ## Final Anti-False-Positive Decision Matrix
 
 | Proof Passed | Risk Assessment | Final Verdict |
 |--------------|-----------------|---------------|
-| 5 / 5 | Highly Viable Solopreneur Business | **APPROVED** |
-| 4 / 5 | Minor Defect (Fixable with Pivot) | **PIVOT REQUIRED** |
-| ≤ 3 / 5 | High Risk of Failure / False Positive | **DISCARDED** |
+| 6 / 6 | Highly Viable Solopreneur Business | **APPROVED** |
+| 5 / 6 | Minor Defect (Fixable with Pivot) | **PIVOT REQUIRED** |
+| ≤ 4 / 6 | High Risk of Failure / False Positive | **DISCARDED** |
