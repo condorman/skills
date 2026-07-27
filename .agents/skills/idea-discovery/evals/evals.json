@@ -1,0 +1,17 @@
+{
+  "skill_name": "idea-discovery",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Vorrei trovare 2 nuove idee di business in ambito AI o Micro-SaaS che posso sviluppare da solo con l'AI. Fai deep research, analizza i competitor e dimmi se sono fattibili.",
+      "expected_output": "Report dettagliato con 2 idee filtrate per fattibilità solopreneur AI, zero rischio legale, analisi competitor e relativo flank angle, monetizzazione e aggiornamento memory log.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Sto valutando di creare un'app mobile che fornisce raccomandazioni mediche e dosaggi di integratori basati sulle analisi del sangue degli utenti. Cosa ne pensi?",
+      "expected_output": "Scarto immediato dell'idea per violazione del filtro di Ultra-Low Legal Risk (consulenza medica/sanitaria regolamentata) e registrazione della decisione in Discarded Ideas nel memory log.",
+      "files": []
+    }
+  ]
+}
