@@ -1,11 +1,11 @@
 ---
 name: idea-discovery
-description: Guide the user in discovering, evaluating, and filtering original and unprecedented product or business ideas across Web, Mobile, Services, AI, and Social contexts. Performs deep research using organic search dorks, manual workaround mining, social networks, freelance job boards, and specialized portals; verifies absolute novelty via prior-art checks; evaluates competitor strength and user complaints; verifies single-person + AI feasibility ("Why Now" tech enablers) and zero legal/regulatory barriers; defines monetization strategies; and maintains a memory log of evaluated ideas. Use whenever the user asks for new project ideas, startup concepts, micro-SaaS opportunities, side project validation, or market research for new products, even if they just ask "what should I build next?".
+description: Guide the user in discovering, evaluating, and filtering original and unprecedented product or business ideas across Web, Mobile, Services, AI, and Social contexts. Performs deep research using organic search dorks, manual workaround mining, social networks, freelance job boards, and specialized portals; verifies absolute novelty via prior-art checks; evaluates competitor strength and user complaints; applies a strict 5-Proof Anti-False-Positive verification protocol (Willingness to Pay, Zero-CAC Distribution, Anti-Churn Retention, AI Reliability, Micro-Moat); verifies single-person + AI feasibility and zero legal/regulatory barriers; defines monetization strategies; and maintains a memory log of evaluated ideas. Use whenever the user asks for new project ideas, startup concepts, micro-SaaS opportunities, side project validation, or market research for new products, even if they just ask "what should I build next?".
 ---
 
-# Original Idea Discovery & Evaluation Skill
+# Original Idea Discovery & Anti-False-Positive Evaluation Skill
 
-This skill provides an advanced methodology to discover, research, and evaluate **original, highly innovative, and unprecedented product ideas** (Web, Mobile, Micro-Services, AI Tools, Social/Community Apps). It focuses on uncovering unserved market friction, leveraging fresh "Why Now?" technology enablers, and guaranteeing that every idea can be executed by a **single person using AI** with **zero legal risks**.
+This skill provides an advanced methodology to discover, research, and evaluate **original, highly innovative, and unprecedented product ideas** (Web, Mobile, Micro-Services, AI Tools, Social/Community Apps). It eliminates **false positives** by subjecting every candidate concept to a rigorous **5-Proof Verification Protocol** (Willingness to Pay, Zero-CAC Distribution, Anti-Churn Frequency, AI Reliability, and Micro-Moat Defensibility).
 
 ---
 
@@ -28,20 +28,26 @@ This skill provides an advanced methodology to discover, research, and evaluate 
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 3. Strict Qualification Filters                         │
- │    - Novelty & Originality Gate                         │
- │    - Solopreneur + AI Feasibility Gate                  │
+ │ 3. Anti-False-Positive 5-Proof Verification Protocol   │
+ │    1. Proof of Willingness to Pay (WTP)                 │
+ │    2. Proof of Zero-CAC Organic Distribution            │
+ │    3. Proof of High Frequency & Retention (Anti-Churn)  │
+ │    4. Proof of AI Technical Reliability (>95% Accuracy) │
+ │    5. Proof of Micro-Moat Defensibility                 │
+ └────────────────────────────┬────────────────────────────┘
+                              │
+ ┌────────────────────────────▼────────────────────────────┐
+ │ 4. Strict Qualification Filters                         │
+ │    - Solopreneur + AI Feasibility Gate ("Why Now?")    │
  │    - Legal & Regulatory Safety Check                    │
- │    - Competitor & Flanking Matrix                       │
- │    - Monetization Formula Validation                    │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 4. Idea Pitch & Detailed Evaluation Report              │
+ │ 5. Idea Pitch & Detailed Evaluation Report              │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 5. Memory Log Update (Update memory/ideas_log.md)       │
+ │ 6. Memory Log Update (Update memory/ideas_log.md)       │
  └─────────────────────────────────────────────────────────┘
 ```
 
@@ -79,38 +85,33 @@ Before declaring an idea "unprecedented", run a **3-pass verification search**:
 
 ---
 
-## Step 3: Strict Qualification Filters
+## Step 3: Anti-False-Positive 5-Proof Verification Protocol
 
-Every proposed idea MUST pass all five qualification gates:
+Consult `references/evaluation_framework.md` for complete guidelines and scoring matrices.
 
-### Filter 1: Novelty & Originality Gate
-- **Requirement**: The concept MUST introduce an original solution angle, a novel combination of emerging tech, or target an underserved niche that has no direct, purpose-built software equivalent.
-- **Reject if**: It's a generic clone of existing popular software (e.g., "yet another Notion clone" or "yet another basic PDF reader").
+Every candidate idea MUST be evaluated against all 5 Proofs:
 
-### Filter 2: Solopreneur + AI Feasibility Gate ("Why Now?")
-- **Requirement**: The entire product lifecycle (MVP development, content generation, maintenance, user support, and ops) MUST be buildable and maintainable by **1 single person using AI tools**.
-- **Reject if**: Requires a dedicated sales team, 24/7 human ops, hardware manufacturing, or complex multi-disciplinary teams.
+1. **Proof 1: Willingness to Pay (WTP)**: Prove that users or companies are currently spending real money (on freelancers, competitor software, or manual workarounds) to solve this pain point.
+2. **Proof 2: Zero-CAC Organic Distribution**: Identify a specific, unpaid organic channel (Chrome Web Store SEO, pSEO, template marketplace, active niche community) to acquire users without paid ads.
+3. **Proof 3: High Frequency & Retention (Anti-Churn)**: Ensure the tool solves a daily or weekly recurring task—not a one-time utility.
+4. **Proof 4: AI Technical Reliability**: Verify that the AI pipeline achieves >95% accuracy without requiring human-in-the-loop debugging or overwhelming 1 person with support tickets.
+5. **Proof 5: Micro-Moat Defensibility**: Define a unique advantage (niche prompt workflow, complex API integrations, SEO lock-in) that prevents instant 1-day cloning by generic AI wrappers.
 
-### Filter 3: Zero / Ultra-Low Legal Risk Gate
-- **Requirement**: Absolute independence from regulatory boards, licenses, or legal consultations.
-- **Reject instantly if**:
-  - Medical/health advice or diagnostics (FDA/EMA/HIPAA).
-  - Financial trading, banking, investment advice, or crypto custody (SEC/FINRA/MiCA).
-  - Gambling, betting, adult content.
-  - Aggressive platform scraping with known litigation risks.
-  - Professional guild, union, or institutional authorization requirements.
-
-### Filter 4: Competitor Matrix & Flank Strategy
-- **Unbeatable Goliath**: Massive network effects or enterprise lock-in -> **DISCARD IMMEDIATELY**.
-- **Defeatable / Flankable**: Bloated, expensive, outdated UX, missing AI automation -> **KEEP** & define the **Flank Strategy** using 1–3 star review complaint mining from G2/Capterra/App Stores.
-
-### Filter 5: Clear Monetization Formula
-- Must have a direct B2B or B2C payment trigger from day 1 (SaaS subscription, pay-per-use, lifetime deal).
-- **Reject if**: Dependent solely on ad impressions or requiring massive viral scale before earning revenue.
+**Scoring**:
+- **5/5 Proofs Passed**: **APPROVED**
+- **4/5 Proofs Passed**: **PIVOT REQUIRED** (Identify and fix the missing proof)
+- **≤3/5 Proofs Passed**: **DISCARDED** (Eliminated as a False Positive)
 
 ---
 
-## Step 4: Standardized Original Idea Evaluation Report
+## Step 4: Strict Qualification Filters
+
+- **Solopreneur + AI Feasibility Gate**: Must be buildable, operate-able, and supportable by 1 person with AI tools.
+- **Zero / Ultra-Low Legal Risk Gate**: Absolute independence from regulatory bodies (FDA, SEC, FINRA, MiCA), medical advice, gambling, or legal consultation requirements.
+
+---
+
+## Step 5: Standardized Original Idea Evaluation Report
 
 For every validated original idea, present the report in this exact format:
 
@@ -132,10 +133,13 @@ For every validated original idea, present the report in this exact format:
 - **Prior-Art Search Results**: [Findings from 3-pass search]
 - **Originality Verdict**: [Confirmed Original / Flanking Existing Competitor]
 
-#### 4. Competitor Analysis & Flank Strategy (If applicable)
-- **Existing Alternatives**: [Current clunky/manual alternatives]
-- **User Complaint Mining**: [Insights from 1-3 star reviews]
-- **Our Flank Angle**: [Why our tool wins]
+#### 4. Anti-False-Positive 5-Proof Verification Matrix
+- **Proof 1 (Willingness to Pay)**: [PASS / FAIL + Evidence]
+- **Proof 2 (Zero-CAC Distribution)**: [PASS / FAIL + Specific Channel]
+- **Proof 3 (Anti-Churn Retention)**: [PASS / FAIL + Frequency Rate]
+- **Proof 4 (AI Reliability >95%)**: [PASS / FAIL + Risk Mitigation]
+- **Proof 5 (Micro-Moat)**: [PASS / FAIL + Defensibility Factor]
+- **Protocol Score**: [5/5 -> APPROVED]
 
 #### 5. Solopreneur + AI Feasibility Stack
 - **Recommended Tech Stack**: [e.g. Next.js / Vite + Tailwind + LLM/Vision API + Supabase]
@@ -156,13 +160,13 @@ For every validated original idea, present the report in this exact format:
 
 ---
 
-## Step 5: Memory Logging
+## Step 6: Memory Logging
 
-Update `memory/ideas_log.md` with every analyzed idea (both Approved and Discarded) including the **Novelty Factor** and **Rejection Reason** to prevent redundant research in future sessions.
+Update `memory/ideas_log.md` with every analyzed idea (both Approved and Discarded) including the **Novelty Factor**, **5-Proof Score**, and **Rejection Reason** to prevent redundant research in future sessions.
 
 ---
 
 ## References
 
-For deep research operators, Google Dorks, and investigation channels:
-- [sources.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/sources.md)
+- [sources.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/sources.md): Deep research search operators, portals, marketplaces, and dorks.
+- [evaluation_framework.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/evaluation_framework.md): Detailed 5-Proof verification protocol against false positives.
