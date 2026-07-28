@@ -6,8 +6,8 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 30
-- **Approved**: 26
+- **Total Ideas Evaluated**: 31
+- **Approved**: 27
 - **Pivot Required**: 3
 - **Discarded**: 1
 
@@ -290,6 +290,17 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [certimach_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/certimach_evaluation_report.md)
 - **Blueprint Architecture**: [certimach_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/certimach_blueprint.md)
 - **Summary**: Vertical B2B reference portal and credential engine for certified machinery safety engineers (CMSE, ISO 13849/ATEX auditors, CE marking specialists) and engineering consultancies. Features verified profile listings with AI OCR certificate validation, RFP scope matching for OEMs preparing for the January 20, 2027 EU Machinery Regulation 2023/1230 deadline, native webinar/course ticketing, technical whitepaper hosting, and a digital store for SISTEMA safety libraries & Excel risk assessment templates. Driven by a single-player embeddable "CE Verification Badge & Media Kit Widget" that gives consultants zero-CAC organic distribution whenever they send client proposals. Solopreneur MVP build time: 10–12 days (6 days core CRUD + 2 days Stripe Connect + 2 days Vision OCR certificate scanner & embeddable badge widget + 2 days launch polish).
+
+### 31. 💡 CarePedia AI: Il Portale di Riferimento B2C & Directory Verificata per Professionisti della Salute Olistica, Perinatale & Benessere Specialistico
+- **Date Evaluated**: 2026-07-28
+- **Category**: Web App / B2C Reference Portal & Professional Marketplace Engine — *Salute Olistica, Perinatale & Benessere Specialistico*
+- **Novelty**: Novel Combination & Unserved Niche Flank (Single-Player Professional Media Kit + Directory B2C con verifica AI dei titoli, Biglietteria Eventi/Seminari, Pubblicazione Articoli Scientifici e Vetrina Prodotti Curati, che affianca i portali medici rigidi di sole prenotazioni come MioDottore/Dottori.it e l'assenza di portali aggregati con contenuti e corsi)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [carepedia_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/carepedia_evaluation_report.md)
+- **Blueprint Architecture**: [carepedia_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/carepedia_blueprint.md)
+- **Summary**: Portale di riferimento B2C e marketplace verticale per professionisti (Ostetriche, Nutrizionisti Funzionali, Consulenti IBCLC, Osteopati Perinatali, Posturologi) e Società/Studi Medici Associati. Consente l'inserimento della scheda professionale verificata tramite AI OCR dei titoli, la promozione dei servizi di consulenza, la segnalazione ed iscrizione a eventi/seminari/webinar con biglietteria integrata Stripe Connect, la pubblicazione di articoli scientifici e la vendita/raccomandazione di prodotti ed e-book. Guidato dal meccanismo Zero-CAC "Verified Expert Badge & Media Kit Widget" incorporabile nel sito dei professionisti. Solopreneur MVP build time: 10–12 giorni (6 giorni CRUD schede/eventi/articoli/prodotti + 2 giorni Stripe Connect ticketing + 2 giorni OCR & AI Voice-to-Article + 2 giorni UI/UX e lancio).
+
 
 
 
