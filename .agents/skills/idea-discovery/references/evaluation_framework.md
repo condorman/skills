@@ -1,10 +1,20 @@
-# Anti-False-Positive Evaluation Framework (6-Proof Verification Protocol v3.0)
+# Anti-False-Positive Evaluation Framework (7-Proof Verification Protocol v4.0)
 
-This document defines the strict, anti-false-positive evaluation criteria designed to eliminate bad ideas early and ensure that only ideas with verified commercial viability, low churn, organic distribution, high technical reliability, and status-quo resistance are approved.
+This document defines the strict, anti-false-positive evaluation criteria designed to eliminate bad ideas early and ensure that only ideas with verified commercial viability, low churn, organic distribution, high technical reliability, genuine solo-buildability, and status-quo resistance are approved.
 
 ---
 
-## The 6 Pitfalls of Idea Evaluation
+## Calibration: Approval Is the Exception, Not the Default
+
+The whole point of this protocol is that most candidate ideas SHOULD fail it — that's what makes a PASS meaningful. If you notice yourself approving most of the ideas you evaluate in a session, that's not a sign the ideas are unusually good; it's a sign the protocol is being applied as a rubber stamp instead of a filter. A few concrete habits keep this honest:
+
+- **Steelman the rejection before you accept.** For every proof, write the strongest case for REJECT first — the most skeptical reading of the evidence you gathered — before deciding it's a PASS. If you can't construct a real rejection case (not a token one), that's what makes the PASS trustworthy.
+- **Evidence you found via search beats evidence you'd expect to find.** "Companies clearly need this" is a hypothesis, not a proof. Only mark a proof PASS on the strength of something you actually retrieved (a real job post, a real review, a real competitor pricing page) — not on the strength of it sounding plausible.
+- **Track your own rate.** If you're approving more than roughly a third of the candidates you seriously evaluate, stop and re-audit the last few approvals — look specifically for Proof 1 (WTP) and Proof 6 (Status Quo) being passed on vibes rather than retrieved evidence, since those are the two easiest to talk yourself into.
+
+---
+
+## The 7 Pitfalls of Idea Evaluation
 
 | Pitfall | Common Delusion | Real-World Failure Reason |
 |---------|-----------------|---------------------------|
@@ -14,6 +24,7 @@ This document defines the strict, anti-false-positive evaluation criteria design
 | **4. Zero Moat (Commodity Wrapper)** | "It wraps an LLM API nicely." | 20 identical clones appear on Product Hunt within 7 days; base LLMs add the feature for free. |
 | **5. AI Reliability Failure** | "AI will handle 100% of the workflow." | LLM hallucinations or edge-case breaks cause endless support tickets that overwhelm 1 person. |
 | **6. Status Quo Inertia** | "An app is slightly cleaner than Excel or paper." | Users prefer their free manual spreadsheet/paper habit over learning a new software tool. |
+| **7. Novelty-Complexity Confusion** | "It's unprecedented because on-device FFT/beamforming/pose-estimation has never been combined this way, and modern AI makes any build fast." | The exact thing that makes it novel (custom signal-processing, real-time sensor fusion, calibration against physical variance) is also exactly what makes it slow and unpredictable to build — novelty and build risk usually move together, not apart. |
 
 ---
 
@@ -65,12 +76,29 @@ Every candidate idea MUST be evaluated against all 6 verification proofs:
   - Does the app save at least 2+ hours per week or $200+/month compared to a free spreadsheet or manual routine?
 - **Verdict**: If the user's free manual habit is "good enough" (<60s effort), **REJECT (Status Quo Inertia Failure)**.
 
+### Proof 7: True Solopreneur Buildability (Technical Reality Check)
+- **Criterion**: A realistic solo developer — not a well-funded team, not a research lab — MUST be able to ship a reliable MVP in the stated timeframe using off-the-shelf frameworks, libraries, and APIs. This is a distinct question from Proof 4 (whether the AI/automation is *accurate enough*): Proof 7 asks whether the *build itself* is tractable at all for one person.
+- **Why this proof exists**: It's easy to describe a genuinely novel mechanism (custom acoustic signal processing, multi-mic phase-array beamforming, real-time pose estimation with sub-100ms audio feedback, spatial AR triangulation) and then default to a generic MVP estimate ("5–7 days") that would actually apply to a CRUD app. Novelty in the underlying mechanism is very often *why* an idea passed the prior-art search — but that same novelty means there is no off-the-shelf library to lean on, so the engineering has to be invented and calibrated from scratch. Treat any idea whose core mechanism is "unprecedented" as carrying elevated build risk by default, and require the estimate to justify itself rather than assert itself.
+- **Red flags that should trigger hard scrutiny (not automatic rejection, but a mandatory justification)**:
+  - Custom signal processing the developer would have to design and tune (FFT-based classification, acoustic impulse response analysis, multi-microphone beamforming/triangulation).
+  - Real-time computer vision or pose estimation with a hard latency budget (e.g. "<100ms").
+  - Any accuracy claim (e.g. ">95%") for a novel on-device model with no existing pretrained model or dataset — this has to be validated empirically against real physical variance (different phones, mic quality, lighting, materials), which off-the-shelf demos don't capture.
+  - Hardware calibration against physical-world variance (device models, ambient noise, lighting conditions) that can't be unit-tested in software alone.
+  - Anything requiring novel algorithm design rather than composing existing SDKs/APIs (e.g. Apple VisionKit, ML Kit, MediaPipe, a hosted LLM API) — composing existing tools is low-risk; inventing the core technique yourself is high-risk.
+- **Checklist**:
+  - Can the core mechanism be built almost entirely by composing existing, well-documented SDKs/APIs (e.g. VisionKit, ML Kit, MediaPipe, Whisper, a hosted LLM) rather than inventing new signal-processing or ML techniques?
+  - Is there a graceful, cheap fallback (manual entry, a simpler heuristic) if the novel/AI component underperforms in the field, so the product still works while it's being tuned?
+  - Does the stated build estimate explicitly separate "core CRUD/UI work" from "the novel technical component," and does the novel-component estimate include time for real-device calibration and testing against physical variance — not just writing the code?
+- **Verdict**: If the core mechanism requires inventing and empirically validating a novel signal-processing/ML technique against real-world physical variance, and the estimate doesn't honestly account for that R&D and calibration time, **REJECT or PIVOT (Buildability Failure)** — recommend either a simpler mechanism, a narrower first version that ships the deterministic parts first, or an honest multi-week-to-multi-month estimate instead of a padded "5–7 day" claim.
+
 ---
 
 ## Final Anti-False-Positive Decision Matrix
 
 | Proof Passed | Risk Assessment | Final Verdict |
 |--------------|-----------------|---------------|
-| 6 / 6 | Highly Viable Solopreneur Business | **APPROVED** |
-| 5 / 6 | Minor Defect (Fixable with Pivot) | **PIVOT REQUIRED** |
-| ≤ 4 / 6 | High Risk of Failure / False Positive | **DISCARDED** |
+| 7 / 7 | Highly Viable Solopreneur Business | **APPROVED** |
+| 6 / 7 | Minor Defect (Fixable with Pivot) | **PIVOT REQUIRED** |
+| ≤ 5 / 7 | High Risk of Failure / False Positive | **DISCARDED** |
+
+A healthy session mixes verdicts. If every idea in a session lands at 7/7, treat that as a signal to re-run the Calibration checklist above against your own recent reasoning before logging the results.

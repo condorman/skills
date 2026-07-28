@@ -6,10 +6,10 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 25
+- **Total Ideas Evaluated**: 26
 - **Approved**: 21
 - **Pivot Required**: 3
-- **Discarded**: 1
+- **Discarded**: 2
 
 ---
 
@@ -230,6 +230,15 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [splitshift_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/splitshift_evaluation_report.md)
 - **Blueprint Architecture**: [splitshift_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/splitshift_blueprint.md)
 - **Summary**: Offline-first mobile app for bar/restaurant shift leads that instantly splits pooled tips (cash + card) across staff present that shift using equal, role-%, hours-weighted, or points-based templates, keeps a persistent multi-shift ledger, exports payroll-ready CSVs, and 1-tap shares the breakdown via text. Deterministic arithmetic core (zero AI in the money-math path); optional on-device OCR receipt-scan autofill as a convenience layer only. Deliberately chosen as a genuinely SIMPLE, non-sensor build (Category A/B) per explicit rotation-gate requirement after the prior 4 mobile log entries (SnapPlate, SnapCondition, VoiceDock, FretPulse) skewed toward Category G hardware/sensor apps. Solopreneur MVP build time: 5-7 days (core), 1-2 weeks with OCR fast-follow.
+
+### 26. 💡 ExposureGuide: Guided ERP Exercises with Live SUDS Graph & Fear Hierarchy (RE-AUDIT of Entry #1 "ExposureFlow AI")
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile App (iOS & Android) — *Category F: Educational/Behavioral Protocols*
+- **Novelty**: **Prior Art Exists / Internal Duplicate** — this is the same core mechanic already logged as entry #1 "ExposureFlow AI" (2026-07-27, previously APPROVED 6/6). User explicitly requested a full-protocol re-evaluation including legal risk, so this session's deeper prior-art pass was run in full rather than skipped per the usual duplicate rule.
+- **7-Proof Score**: 2/7
+- **Status**: **DISCARDED**
+- **Detailed Report**: [exposureguide_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/idea-discovery-workspace/iteration-2/therapy-legal-check/with_skill/outputs/exposureguide_evaluation_report.md)
+- **Summary**: Mobile ERP (Exposure and Response Prevention) app with a fear hierarchy builder and live real-time SUDS anxiety graph during exposure exercises, for OCD/phobias/anxiety. This session's prior-art research found the exact mechanic already shipped, free, by at least five named competing apps ("Exposure - Face Your Fears," "FearTools - Anxiety Aid," "OCD ERP: Exposure Therapy," "OCD Therapy Toolkit," "unstuck," "OCD Mantra"), failing WTP, Zero-CAC Distribution, Retention, Micro-Moat, and Status Quo Resistance proofs (2/7). Legal tier is 🔴 Elevated (mental-health/exposure-therapy content): FDA SaMD guidance explicitly names exposure therapy for anxiety/PTSD as a function that can cross into regulated-device territory, though real competitors stay compliant via explicit non-therapy disclaimers and FDA's "General Wellness" low-risk carve-out — Legal Risk Level assessed as Moderate (not Very Low), with concrete mitigations required (no diagnostic/treatment claims, prominent disclaimer, on-device-only data). **Flags prior entry #1's APPROVED verdict as likely stale** — recommend treating it as overturned by this re-audit rather than authoritative, since its evidence log did not appear to catch these free direct competitors.
 
 ### 11. 💡 FretPulse AI: On-Device Acoustic & Vision Guitar Fret Buzz, Action & Truss Rod Setup Assistant
 - **Date Evaluated**: 2026-07-27

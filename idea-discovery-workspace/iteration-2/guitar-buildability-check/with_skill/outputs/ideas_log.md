@@ -6,9 +6,9 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 25
+- **Total Ideas Evaluated**: 26
 - **Approved**: 21
-- **Pivot Required**: 3
+- **Pivot Required**: 4
 - **Discarded**: 1
 
 ---
@@ -240,4 +240,13 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [fretpulse_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/fretpulse_evaluation_report.md)
 - **Blueprint Architecture**: [fretpulse_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/fretpulse_blueprint.md)
 - **Summary**: On-device mobile app that records a 1-second audio pluck per fret to detect non-harmonic metallic rattle transients ($2.5kHz - 8kHz$) paired with 12th fret camera macro action measurement. Provides exact 1/8-turn truss rod directions and visual fretboard buzz heatmaps. Solopreneur MVP build time: 5-7 days.
+
+### 26. 💡 FretCheck AI: Mic-and-Camera Guitar Setup Diagnostician (Buzz, Action, Truss Rod) — *Re-Audit of Entry #11*
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile App (iOS & Android) — *Category G: Hardware/Sensor-Based Apps*
+- **Novelty**: Novel Combination externally (no shipped automated competitor found) — but flagged in Step 0 as a **near-exact semantic duplicate of Entry #11 (FretPulse AI)**: same sensors (mic + camera), same three symptoms (buzz / action / truss rod), same instrument category. This entry is a re-audit under the current v5.0 7-Proof protocol (Entry #11 was scored under an older 6-Proof rubric with no Proof 7 buildability check).
+- **7-Proof Score**: 6/7
+- **Status**: **PIVOT REQUIRED**
+- **Detailed Report**: [fretcheck_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/idea-discovery-workspace/iteration-2/guitar-buildability-check/with_skill/outputs/fretcheck_evaluation_report.md)
+- **Summary**: Re-evaluation of the FretPulse/FretCheck mechanism (mic-based per-fret FFT buzz classification + camera-based string action height measurement + deterministic truss-rod turn guidance). Fails Proof 4 (AI Reliability) as literally specified: this session's research found smartphone camera/AR measurement is only accurate to ~1-2cm without a physical reference object in frame, two to three orders of magnitude coarser than the ~0.1-0.5mm precision that matters for guitar action — the camera-measures-height claim needs a reference-object redesign (e.g. a calibration card in-frame) before it is reliable. Also corrects the prior "5-7 days" MVP estimate carried in Entry #11: an honest Proof 7 breakdown (ordinary CRUD ~5 days + acoustic-classifier R&D/calibration ~13-19 days across ≥5 guitars and ≥5 phones + camera-measurement redesign/calibration ~9-12 days + truss-rod engine + integration/QA ~7 days) puts realistic solopreneur MVP time at **~6-9 weeks**, not under two weeks. Recommend treating this report as superseding Entry #11's Proof 4/Proof 7 findings rather than logging as an independent idea.
 

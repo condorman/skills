@@ -31,10 +31,3 @@ Target high-intent business pain points where companies are currently paying mon
 
 - Must feature at least one **Deep API Integration** (e.g. Stripe Webhooks, Shopify GraphQL API, Xero OpenAPI, GitHub Actions).
 - Must solve a **recurring monthly/quarterly compliance task** (invoicing, VAT OSS reporting, schema guardrails) to ensure <2% monthly churn.
-
----
-
-## 4. Workflow-Vertical Rotation & Anti-Fissazione Gate
-
-- **CHECK `ideas_log.md`**: Inspect the last 3 B2B SaaS / developer-tool entries.
-- **STRICT ROTATION RULE**: If 2+ recent entries cluster on the same workflow vertical (e.g. Stripe/payment reconciliation tools, or dispute/chargeback tools, or schema/API-guardrail tools), **DO NOT propose another tool in that same vertical**. Rotate to a genuinely different workflow category — e.g. from payments/finance-ops to compliance/reporting, from developer-CI tooling to customer-support automation, from e-commerce operations to content/SEO tooling — rather than a differently-named tool solving the same underlying job. Two ideas that both "watch a webhook and auto-generate a document" are the same shape even if one is about chargebacks and the other about VAT filings — only rotate if the actual buyer, workflow, and integration surface are meaningfully different.

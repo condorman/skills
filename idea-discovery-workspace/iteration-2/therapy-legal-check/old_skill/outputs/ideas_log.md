@@ -6,14 +6,26 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 25
+- **Total Ideas Evaluated**: 26
 - **Approved**: 21
 - **Pivot Required**: 3
-- **Discarded**: 1
+- **Discarded**: 2
 
 ---
 
 ## Evaluated Ideas
+
+### 26. 💡 ExposureGuide: Guided ERP Exposure Sessions with Live SUDS Graph & Custom Fear Hierarchy
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile App (iOS & Android) — *Category B: Gestionali & Micro-Productivity / Category F: Educational & Behavioral Protocols*
+- **Novelty**: ⚠️ Prior Art Exists / Commodity Mechanics (Functionally identical free competitor found: "Exposure – Face Your Fears" already ships fear hierarchy + live 0-100 anxiety tracking during exposure; also matched by "OCD Tracker – ERP Therapy" and "OCD ERP: Exposure Therapy" on Google Play)
+- **6-Proof Score**: 2/6
+- **Status**: **DISCARDED**
+- **Detailed Report**: [exposureguide_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/idea-discovery-workspace/iteration-2/therapy-legal-check/old_skill/outputs/exposureguide_evaluation_report.md)
+- **Rejection Reason**: Failed Proof 1 (WTP — direct feature-equivalent competitor is free), Proof 3 (Retention — ERP is a bounded course of treatment, churns on completion), Proof 5 (Micro-Moat — hierarchy+SUDS is a standardized decades-old clinical worksheet technique, zero proprietary angle), and Proof 6 (Status Quo Resistance — the realistic alternative is a free app that already does this, not paper/spreadsheet).
+- **⚠️ MEMORY DISCREPANCY FLAG**: This concept is functionally identical to entry #1 "ExposureFlow AI" below (dated 2026-07-27, APPROVED 6/6, same ERP + live SUDS graph + fear hierarchy loop for OCD/phobias). This re-run, using live prior-art web search, surfaced direct free competing apps not reflected in the prior APPROVED verdict, and additionally found the vertical carries real Legal & Regulatory risk (unlicensed-practice gray zone, FDA SaMD exposure risk if treatment claims are made, documented harm risk from unsupervised exposure work, GDPR Art. 9 special-category health data obligations) that the prior entry's report should be re-audited against. Future sessions should treat "ExposureFlow AI" as requiring re-evaluation rather than a settled APPROVED precedent, and should not re-propose the bare hierarchy+SUDS-graph loop without the therapist-facing PDF-export differentiator already noted in that entry.
+
+
 
 ### 1. 💡 DefuseFlow AI: Voice-to-CBT Cognitive Distortion Dismantler & 1-Tap Therapy Session Exporter
 - **Date Evaluated**: 2026-07-27

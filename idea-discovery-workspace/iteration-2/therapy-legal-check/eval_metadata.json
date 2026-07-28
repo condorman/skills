@@ -1,0 +1,11 @@
+{
+  "eval_id": 1,
+  "eval_name": "therapy-legal-check",
+  "prompt": "Vorrei creare un'app mobile che guida gli utenti attraverso esercizi di esposizione graduale (in stile ERP - Exposure and Response Prevention) per ansia, fobie e disturbo ossessivo-compulsivo, con un grafico live del livello di ansia (SUDS) durante l'esercizio e una gerarchia della paura personalizzabile. Valutala con il tuo protocollo completo, incluso il rischio legale.",
+  "assertions": [
+    "Detects and flags the near-duplicate existing log entry 'ExposureFlow AI' (or explicitly frames the new concept as a deliberate variant with a stated reason)",
+    "Legal & Regulatory Safety section is NOT a generic 'Very Low / Zero, fully compliant' boilerplate given the health/mental-health nature of the idea",
+    "Legal section cites or references a specific regulatory/policy surface (e.g. FDA SaMD, App Store health content policy, clinical liability) rather than asserting compliance without research",
+    "Risk tier is classified as elevated/regulated given the therapy/mental-health domain"
+  ]
+}

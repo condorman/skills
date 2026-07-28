@@ -33,10 +33,3 @@ Always abstract the game into its raw physics or logic loop before searching:
 | **Daily Wordle Clones** | 🔴 High (Abandonment after week 2) | Must add Endless Mode + Ranked Duels |
 | **Physics Arcade / Merge** | 🟢 Low (High daily replayability) | Add Roguelite Upgrade Tree |
 | **Puzzle / Card Ordering** | 🟡 Medium (High content depletion) | Add AI Procedural Level/Deck Generation |
-
----
-
-## 4. Core-Mechanic Rotation & Anti-Fissazione Gate
-
-- **CHECK `ideas_log.md`**: Inspect the last 3 game entries.
-- **STRICT ROTATION RULE**: If 2+ recent entries share the same underlying physics/gameplay loop — even under different names, themes, or art direction — **DO NOT propose another variant of that loop**. "A magnetic whip that swings to deflect spheres" and "a magnetic chain that builds up to trigger chain reactions" are the same core mechanic wearing different names; treat them as the same entry for rotation purposes. Abstract each candidate to its raw mechanic (as in the Mechanics-First Search Protocol) before comparing it against recent log entries, and rotate to a genuinely different physics/logic loop rather than a reskin.

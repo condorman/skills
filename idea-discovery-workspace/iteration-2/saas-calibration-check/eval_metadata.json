@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "eval_name": "saas-calibration-check",
+  "prompt": "Trovami una nuova idea originale di micro-SaaS B2B per il reporting/finance lato piccoli e-commerce, verificando bene che non esista già prior art diretta, e valutala con il tuo protocollo completo.",
+  "assertions": [
+    "Evidence Audit Log contains real, plausible-looking URLs/sources tied to actual search queries rather than vague assertions",
+    "The report engages seriously with at least one proof that could plausibly fail, rather than every proof reading as an easy automatic PASS",
+    "If the idea is approved, the approval is earned with concrete evidence per proof rather than generic optimistic language",
+    "Solo Execution Time breaks down CRUD/UI work vs any novel component, per Proof 7"
+  ]
+}

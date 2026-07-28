@@ -1,13 +1,11 @@
 ---
 name: idea-discovery
-description: Guide the user in discovering, researching, evaluating, and architecting original product ideas across Web, Mobile Apps, B2B Micro-SaaS, Games, and AI Tools. Executes vertical Google Dork search matrices, patent searches, mechanics-first prior-art audits, and the strict 7-Proof Verification Protocol (Willingness to Pay & Demand Velocity, Zero-CAC Distribution, Anti-Churn Retention, AI Reliability >95%, Micro-Moat Defensibility, Status Quo Resistance, and True Solopreneur Buildability). Runs a proportionate legal/regulatory risk check for health, financial, minor-facing, or biometric-data ideas instead of a boilerplate "very low risk" verdict. Automatically updates docs/ideas_log.md and generates docs/<idea_slug>_blueprint.md for approved concepts. Use whenever the user asks for project ideas, startup concepts, micro-SaaS opportunities, mobile app ideas, game concepts, product validation, market research, or asks "what should I build next?", "cerca nuove app", "valuta questa idea", or runs /idea-discovery.
+description: Guide the user in discovering, researching, evaluating, and architecting original product ideas across Web, Mobile Apps, B2B Micro-SaaS, Games, and AI Tools. Executes vertical Google Dork search matrices, patent searches, mechanics-first prior-art audits, and the strict 6-Proof Verification Protocol (Willingness to Pay & Demand Velocity, Zero-CAC Distribution, Anti-Churn Retention, AI Reliability >95%, Micro-Moat Defensibility, and Status Quo Resistance). Automatically updates docs/ideas_log.md and generates docs/<idea_slug>_blueprint.md for approved concepts. Use whenever the user asks for project ideas, startup concepts, micro-SaaS opportunities, mobile app ideas, game concepts, product validation, market research, or asks "what should I build next?", "cerca nuove app", "valuta questa idea", or runs /idea-discovery.
 ---
 
-# Original Idea Discovery & Anti-False-Positive Evaluation Skill (v5.0)
+# Original Idea Discovery & Anti-False-Positive Evaluation Skill (v4.0)
 
-This skill provides an advanced methodology to discover, research, evaluate, and architect **original, highly innovative, and unprecedented product ideas** (Web, Mobile Apps, B2B Micro-SaaS, AI Tools, Games). It eliminates **false positives** by subjecting every candidate concept to a rigorous **7-Proof Verification Protocol** (Willingness to Pay & Demand Velocity, Zero-CAC Distribution, Anti-Churn Frequency, AI Technical Reliability, Micro-Moat Defensibility, Status Quo Resistance, and True Solopreneur Buildability).
-
-**A note on rigor**: this protocol only does its job if most candidates fail it. If a session ends with nearly everything approved, that's not evidence the ideas were unusually good — it's a sign the proofs were applied as a rubric to justify a conclusion already reached, rather than as a real filter. See the Calibration section in `references/evaluation_framework.md` and apply it throughout, not just at the end.
+This skill provides an advanced methodology to discover, research, evaluate, and architect **original, highly innovative, and unprecedented product ideas** (Web, Mobile Apps, B2B Micro-SaaS, AI Tools, Games). It eliminates **false positives** by subjecting every candidate concept to a rigorous **6-Proof Verification Protocol** (Willingness to Pay & Demand Velocity, Zero-CAC Distribution, Anti-Churn Frequency, AI Technical Reliability, Micro-Moat Defensibility, and Status Quo Resistance).
 
 ---
 
@@ -15,8 +13,7 @@ This skill provides an advanced methodology to discover, research, evaluate, and
 
 ```
  ┌─────────────────────────────────────────────────────────┐
- │ 0. Memory Check (Literal AND semantic duplicate scan    │
- │    against the FULL log, not just the last 3 entries)   │
+ │ 0. Memory Check (Verify past logged/discarded ideas)    │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
@@ -29,26 +26,22 @@ This skill provides an advanced methodology to discover, research, evaluate, and
  │ 2. Prior-Art & Novelty Audit (5-Pass Search Protocol)   │
  │    - Run scripts/deep_search_miner.py                    │
  │    - Mechanics-First Isolation + Patent & Store Search  │
- │    - Every cited source MUST come from an actual search │
- │      tool call — never invent a URL or competitor       │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 3. Anti-False-Positive 7-Proof Verification Protocol   │
+ │ 3. Anti-False-Positive 6-Proof Verification Protocol   │
  │    1. Proof of Willingness to Pay & Demand Velocity     │
  │    2. Proof of Zero-CAC Organic Distribution            │
  │    3. Proof of High Frequency & Retention (Anti-Churn)  │
  │    4. Proof of AI Technical Reliability (>95% Accuracy) │
  │    5. Proof of Micro-Moat Defensibility                 │
  │    6. Proof of Status Quo Resistance (Non-Software)    │
- │    7. Proof of True Solopreneur Buildability            │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
  │ 4. Strict Qualification & Domain Directive Gates        │
  │    - Solopreneur + AI Feasibility Gate ("Why Now?")    │
- │    - Proportionate Legal & Regulatory Risk Check        │
- │      (real research for health/money/minors/biometric) │
+ │    - Legal & Regulatory Safety Check                    │
  │    - Consult domain_games.md / domain_saas.md / mobile  │
  └────────────────────────────┬────────────────────────────┘
                               │
@@ -62,7 +55,7 @@ This skill provides an advanced methodology to discover, research, evaluate, and
                               │
  ┌────────────────────────────▼────────────────────────────┐
  │ 7. Blueprint Generation (docs/<idea>_blueprint.md)      │
- │    (Mandatory for APPROVED 7/7 ideas)                   │
+ │    (Mandatory for APPROVED 6/6 ideas)                   │
  └─────────────────────────────────────────────────────────┘
 ```
 
@@ -75,13 +68,12 @@ If no target project path is specified by the user, default to `<workspace_root>
 
 ---
 
-## Step 0: Check Memory Log, Semantic Duplicate Scan & Category Diversity Gate
+## Step 0: Check Memory Log & Sensor Diversity Gate
 
 1. Read `<target_project>/docs/ideas_log.md` (or workspace `<workspace_root>/docs/ideas_log.md`).
 2. Check all previously recorded **APPROVED**, **PIVOT REQUIRED**, and **DISCARDED** ideas.
 3. **DO NOT** re-propose or re-analyze concepts already recorded unless specifically instructed.
-4. **Semantic duplicate scan (not just literal name matching)**: Before committing to a candidate concept, compare its *core mechanic/job-to-be-done* — not just its name or branding — against **every** entry already in the log, not only the most recent ones. Two ideas with different names and taglines can still be the same product. For example, "a magnetic-whip physics arcade game" and "a magnetic-chain physics arcade game" are the same underlying mechanic even with different names — if the log already contains one, either skip the new concept or explicitly frame it as a deliberate variant and say why it's different enough to coexist (different platform, meaningfully different core loop, etc.). If you're unsure whether two concepts are "the same idea," err toward treating them as duplicates and picking something else — the log is only useful as a competitive/novelty ledger if near-duplicates get caught here instead of after a full research cycle.
-5. **Enforce Category Diversity Gate**: Inspect the last 3 entries in `ideas_log.md` *within the same domain* (mobile app / B2B SaaS / game). If 2+ recent entries in that domain cluster on the same underlying vertical (e.g. Audio FFT / Spectrogram sensor apps, or physics-merge arcade games, or Stripe-reconciliation SaaS tools), **DO NOT propose another one in that same cluster**. For mobile apps, rotate across the categories in `domain_mobile.md` (Optical/Vision, BLE/UWB, Motion/Biometrics, Micro-Location, File Utility, or a non-sensor Category A–F concept). For SaaS and Games, see the rotation rules in `domain_saas.md` and `domain_games.md` respectively.
+4. **Enforce Sensor & Category Diversity Gate**: Inspect the last 3 mobile app entries in `ideas_log.md`. If 2+ recent entries belong to the same hardware sensor (e.g. Audio FFT / Spectrogram), **DO NOT propose another audio app**. You MUST rotate strictly to another hardware vertical (Optical/Vision, BLE/UWB, Motion/Biometrics, Micro-Location, or File Utility).
 
 ---
 
@@ -116,15 +108,13 @@ Run a **5-pass verification search**:
   - Construct a **Feature Delta Matrix** comparing the candidate idea against the 2 closest prior-art solutions.
   - Require an **Evidence Audit Log** listing verified query strings and real URLs examined.
 
-**Evidence integrity rule**: every entry in the Evidence Audit Log — every competitor name, URL, review quote, or pricing figure — must come from an actual search/fetch tool call made during this session, not from general knowledge or a plausible-sounding guess. If a search tool isn't available or a claim can't be verified, say so explicitly in the report ("prior-art search for X could not be completed") rather than filling the gap with an invented-but-plausible URL or app name. A thin but honest evidence log is far more useful than a complete-looking one that's partly fabricated, since the whole point of this step is to catch prior art that would otherwise sink the idea later.
-
 ---
 
-## Step 3: Anti-False-Positive 7-Proof Verification Protocol
+## Step 3: Anti-False-Positive 6-Proof Verification Protocol
 
-Consult `references/evaluation_framework.md` for complete guidelines, the Calibration section, and scoring matrices.
+Consult `references/evaluation_framework.md` for complete guidelines and scoring matrices.
 
-Every candidate idea MUST be evaluated against all 7 Proofs. For each one, apply the steelman-rejection habit from the Calibration section before marking it PASS:
+Every candidate idea MUST be evaluated against all 6 Proofs:
 
 1. **Proof 1: Willingness to Pay & Demand Velocity (WTP & Trends)**: Prove that users or companies are currently spending real money (on freelancers, competitor software, or manual workarounds) AND search volume momentum is rising/active.
 2. **Proof 2: Zero-CAC Organic Distribution**: Identify a specific, unpaid organic channel (Chrome Web Store SEO, pSEO, template marketplace, active niche community, viral short-form video) to acquire users without paid ads.
@@ -132,23 +122,20 @@ Every candidate idea MUST be evaluated against all 7 Proofs. For each one, apply
 4. **Proof 4: AI Technical Reliability**: Verify that the AI pipeline achieves >95% accuracy without requiring human-in-the-loop debugging or overwhelming 1 person with support tickets.
 5. **Proof 5: Micro-Moat Defensibility**: Define a unique advantage (niche prompt workflow, complex API integrations, SEO lock-in, spatial audio calibration) that prevents instant 1-day cloning by generic AI wrappers.
 6. **Proof 6: Status Quo Resistance (Non-Software Substitute Test)**: Prove that the app saves >2 hours/week or $200+/month compared to free human inertia (paper, spreadsheet, pinned WhatsApp message).
-7. **Proof 7: True Solopreneur Buildability**: Verify the core mechanism can be built almost entirely by composing existing SDKs/APIs rather than inventing and empirically calibrating novel signal-processing or ML techniques — and that the stated MVP timeline honestly separates ordinary CRUD/UI work from any novel-component R&D and real-device calibration time. Treat "unprecedented" mechanisms as carrying build risk by default; see the Proof 7 red-flag checklist in `evaluation_framework.md`.
 
 **Scoring**:
-- **7/7 Proofs Passed**: **APPROVED**
-- **6/7 Proofs Passed**: **PIVOT REQUIRED** (Identify and fix the missing proof)
-- **≤5/7 Proofs Passed**: **DISCARDED** (Eliminated as a False Positive)
+- **6/6 Proofs Passed**: **APPROVED**
+- **5/6 Proofs Passed**: **PIVOT REQUIRED** (Identify and fix the missing proof)
+- **≤4/6 Proofs Passed**: **DISCARDED** (Eliminated as a False Positive)
 
 ---
 
 ## Step 4: Qualification & Domain-Specific Directives
 
 Load the relevant domain reference file based on the concept type:
-- For **Game Concepts**: Consult [domain_games.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_games.md) (Multi-session replayability, virality loops, endless modes, mechanic rotation gate).
-- For **B2B SaaS / Web Apps**: Consult [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md) (API integrations, compliance churn <2%, freelancer WTP, workflow-vertical rotation gate).
+- For **Game Concepts**: Consult [domain_games.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_games.md) (Multi-session replayability, virality loops, endless modes).
+- For **B2B SaaS / Web Apps**: Consult [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md) (API integrations, compliance churn <2%, freelancer WTP).
 - For **Mobile Apps**: Consult [domain_mobile.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_mobile.md) (Explores 7 broad functional categories: Strumenti di Calcolo, Gestionali & Micro-CRM, Tools per Professionisti, Social & Community, Divertimento/Entertainment, Editoriali/Contenuti, Hardware/Sensori. Enforces Category Rotation Gate).
-
-Then run the **Legal & Regulatory Risk Check**: consult [legal_risk_playbook.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/legal_risk_playbook.md) and classify the idea into a risk tier. Ideas touching health/mental health, money movement, minors, biometric data, or professional-advice substitutes require actual cited regulatory research before Section 6 of the report can be written — a "Very Low / Zero" verdict without that research is not acceptable for those categories.
 
 ---
 
@@ -187,25 +174,23 @@ For every validated original idea, present the report in this exact format:
   - [App / Tool / Patent 1 Name](url_1) - *Findings summary*
   - [App / Tool / Patent 2 Name](url_2) - *Findings summary*
 
-#### 4. Anti-False-Positive 7-Proof Verification Matrix
+#### 4. Anti-False-Positive 6-Proof Verification Matrix
 - **Proof 1 (Willingness to Pay & Demand Velocity)**: [PASS / FAIL + Evidence]
 - **Proof 2 (Zero-CAC Distribution)**: [PASS / FAIL + Specific Channel]
 - **Proof 3 (Anti-Churn Retention)**: [PASS / FAIL + Frequency Rate]
 - **Proof 4 (AI Reliability >95%)**: [PASS / FAIL + Risk Mitigation]
 - **Proof 5 (Micro-Moat)**: [PASS / FAIL + Defensibility Factor]
 - **Proof 6 (Status Quo Resistance)**: [PASS / FAIL + Non-Software Inertia Check]
-- **Proof 7 (True Solopreneur Buildability)**: [PASS / FAIL + What in the mechanism is composed-from-existing-SDKs vs. novel-and-uncalibrated, and whether the timeline honestly reflects that split]
-- **Protocol Score**: [7/7 -> APPROVED]
+- **Protocol Score**: [6/6 -> APPROVED]
 
 #### 5. Solopreneur + AI Feasibility Stack
 - **Recommended Tech Stack**: [e.g. Next.js / Vite + Tailwind + LLM/Vision API + Supabase]
 - **AI Automation Scope**: [What AI handles automatically]
-- **Solo Execution Time**: [Estimated time for MVP, broken into ordinary CRUD/UI work vs. any novel-component R&D + real-device calibration time — e.g. "3 days core app + 4-6 days calibrating on-device acoustic classification across 5+ phone models", not a single undifferentiated number]
+- **Solo Execution Time**: [Estimated time for MVP, e.g. 1-2 weeks]
 
 #### 6. Legal & Regulatory Safety
-- **Risk Tier**: [🟢 Standard / 🔴 Elevated — see legal_risk_playbook.md]
-- **Legal Risk Level**: [Very Low / Low / Moderate — "Very Low" for an 🔴 Elevated-tier idea requires the cited research below to justify it]
-- **Notes**: [For 🟢 Standard tier: a short paragraph is enough. For 🔴 Elevated tier: cite the specific regulatory/policy surface found, how the closest real competitors scope their claims/disclaimers, and the concrete mitigation this idea adopts.]
+- **Legal Risk Level**: Very Low / Zero
+- **Notes**: Fully compliant, zero licenses required.
 
 #### 7. Monetization Strategy
 - **Pricing Model**: [e.g. $19/month or $49 one-time]
@@ -219,19 +204,13 @@ For every validated original idea, present the report in this exact format:
 
 ## Step 6: Memory Logging
 
-Update `<target_project>/docs/ideas_log.md` with every analyzed idea (both Approved and Discarded) including the **Novelty Factor**, **7-Proof Score**, and **Rejection Reason** to prevent redundant research in future sessions.
-
-**Avoid the numbering-collision bug**: entries in this log must NOT be manually numbered with a per-session counter that restarts or gets guessed (this log has previously ended up with multiple entries all titled `### 1.` or `### 2.` because entries were appended without checking what was already there). Instead:
-1. Before adding a new entry, count the existing `###` idea headings already in the file.
-2. Always **append the new entry at the very end of the "Evaluated Ideas" section** (never insert it above older entries) and number it `<existing count> + 1`.
-3. Update the **Log Summary** counts (Total / Approved / Pivot Required / Discarded) at the top of the file to match reality after the append.
-4. If you're unsure the count is reliable (e.g. the log was hand-edited), it's safer to drop the numeric prefix for that entry entirely than to guess and collide with an existing number — a heading without a number is harmless; two headings with the same number breaks anything that references "entry #N" later.
+Update `<target_project>/docs/ideas_log.md` with every analyzed idea (both Approved and Discarded) including the **Novelty Factor**, **6-Proof Score**, and **Rejection Reason** to prevent redundant research in future sessions.
 
 ---
 
-## Step 7: Technical Architecture Blueprint Generation (MANDATORY for APPROVED 7/7 Ideas)
+## Step 7: Technical Architecture Blueprint Generation (MANDATORY for APPROVED 6/6 Ideas)
 
-For every concept that achieves an **APPROVED (7/7)** rating, consult [blueprint_template.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/blueprint_template.md) and automatically generate `<target_project>/docs/<idea_slug>_blueprint.md` containing:
+For every concept that achieves an **APPROVED (6/6)** rating, consult [blueprint_template.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/blueprint_template.md) and automatically generate `<target_project>/docs/<idea_slug>_blueprint.md` containing:
 1. System Architecture Diagram (Mermaid).
 2. Database DDL Schema (Postgres / Supabase SQL).
 3. Core API Endpoints & Data Contracts.
@@ -244,9 +223,8 @@ For every concept that achieves an **APPROVED (7/7)** rating, consult [blueprint
 
 - [sources.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/sources.md): Deep research search operators, portals, marketplaces, and dorks.
 - [deep_search_playbook.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/deep_search_playbook.md): Vertical search Dorks, Mechanics-First isolation, Asian market queries, Patent search, Status Quo inertia test, Feature Delta Matrix, and Evidence Audit Log rules.
-- [evaluation_framework.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/evaluation_framework.md): Detailed 7-Proof verification protocol against false positives, plus the Calibration section on keeping approval the exception.
-- [legal_risk_playbook.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/legal_risk_playbook.md): Risk-tier classification and required research depth for health/financial/minor/biometric-data ideas.
-- [domain_games.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_games.md): Directives for gaming concepts, including the mechanic rotation gate.
-- [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md): Directives for B2B SaaS and developer tools, including the workflow-vertical rotation gate.
+- [evaluation_framework.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/evaluation_framework.md): Detailed 6-Proof verification protocol against false positives.
+- [domain_games.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_games.md): Directives for gaming concepts.
+- [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md): Directives for B2B SaaS and developer tools.
 - [domain_mobile.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_mobile.md): Directives for iOS/Android native app capabilities.
 - [blueprint_template.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/blueprint_template.md): Architecture blueprint template for approved ideas.
