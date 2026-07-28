@@ -6,8 +6,8 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 25
-- **Approved**: 21
+- **Total Ideas Evaluated**: 26
+- **Approved**: 22
 - **Pivot Required**: 3
 - **Discarded**: 1
 
@@ -240,4 +240,14 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [fretpulse_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/fretpulse_evaluation_report.md)
 - **Blueprint Architecture**: [fretpulse_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/fretpulse_blueprint.md)
 - **Summary**: On-device mobile app that records a 1-second audio pluck per fret to detect non-harmonic metallic rattle transients ($2.5kHz - 8kHz$) paired with 12th fret camera macro action measurement. Provides exact 1/8-turn truss rod directions and visual fretboard buzz heatmaps. Solopreneur MVP build time: 5-7 days.
+
+### 26. 💡 ShopTally: The Cross-Company Deadline & Payout Ledger for Mystery Shoppers
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile App (iOS & Android) — *Category A: Strumenti di Calcolo & Category B: Gestionali & Micro-Productivity (Non-Sensor, Rotation Gate Compliant)*
+- **Novelty**: Unserved Niche Flank (Personal cross-MSC fee/reimbursement/deadline ledger, flanking single-company job-marketplace apps like Secret Shopper/4Shoppers/Shopmetrics, the closest personal tool "Shop It Timer Notes" which explicitly stops short of cross-company aggregation, generic API-linked gig trackers like Solo/Gig built for the wrong integration model, and manual spreadsheet workarounds sold as a Gumroad template)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [shoptally_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/shoptally_evaluation_report.md)
+- **Blueprint Architecture**: [shoptally_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/shoptally_blueprint.md)
+- **Summary**: Mobile app for independent mystery shoppers registered with many Mystery Shopping Companies (MSCs) at once. Tracks fee + reimbursement + deadline + approval/payment status per shop across all companies in one ledger, pushes deadline-miss warnings (a real, cited financial risk in this niche), and optionally uses an LLM to parse forwarded MSC confirmation emails into structured entries (manual fallback always available). Deterministic CRUD core; AI is a convenience layer only. Chosen after screening and discarding ~12 other simple-app candidates (co-parenting expense splitter, vending-machine route tracker, freelance scope-creep billing, vacation-home cost splitter, pickup-sports fee splitter, cottage-food recipe pricing, hobby-farm feed calculator, neighbor tool-lending tracker, family car scheduler, favor/IOU tracker, Christmas-light install quoting, junk-removal quoting, mobile-notary tracker, farmers-market vendor tracker) that all turned out to have direct, well-established prior art during Step 2 screening — logged here for context, not as scored entries since they didn't reach the full 7-proof stage. Solopreneur MVP build time: 9-11 days (5-6 days core CRUD + 2-3 days AI extraction + 2 days auth/launch).
 
