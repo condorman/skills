@@ -2,14 +2,18 @@
 
 This log tracks all product ideas discovered, evaluated, and scored using the `idea-discovery` skill's verification protocol. The protocol has evolved over time (6-Proof, now 7-Proof) — check each entry's own recorded score rather than assuming a fixed proof count. Entries scored before Proof 7 (True Solopreneur Buildability) or the Calibration guidance existed should be treated as unverified against current rigor if revisited, not as still-settled.
 
+**Flagged for re-audit**: CertiMach AI (#30), CarePedia AI (#31), AcoustiPedia AI (#32), and CraftPedia AI (#35) were all approved before `domain_saas.md` Section 5 (template-reskin detection & Bootstrap Proof) existed, and are the same underlying "verified directory + credential OCR + event ticketing + content hub + embeddable badge" template reskinned across different professional verticals — see [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md#5-marketplace--verified-directory--reference-portal-ideas-template-reskin-detection--bootstrap-proof). Their Proof 2 passes also didn't address the two-sided marketplace cold-start problem. Treat their APPROVED status as unverified until one is re-audited under the current rules; the other three should very likely not be built as separate products.
+
+**Also flagged**: LuminaGlass AI (#36) was approved 7/7 without ever engaging with LofiApothecary AI (#34) — a cozy mobile/Steam simulation game discarded two entries earlier in the same log for "category saturation / high UA cost." LuminaGlass may well be genuinely differentiated (a different craft, different mechanics), but the report never makes that case against the sibling rejection, so the APPROVED status rests on an incomplete evaluation. Re-audit under the rejection-reason consistency check in `SKILL.md` Step 0 before relying on this one either.
+
 ---
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 32
-- **Approved**: 28
+- **Total Ideas Evaluated**: 36
+- **Approved**: 30
 - **Pivot Required**: 3
-- **Discarded**: 1
+- **Discarded**: 3
 
 ---
 
@@ -310,6 +314,51 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [acoustipedia_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/acoustipedia_evaluation_report.md)
 - **Blueprint Architecture**: [acoustipedia_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/acoustipedia_blueprint.md)
 - **Summary**: Portale di riferimento B2C e marketplace verticale per Tecnici Competenti in Acustica (TCA), Ingegneri/Architetti Acustici ed Imprese di Insonorizzazione. Gli utenti B2C (proprietari di case, locali, uffici) trovano professionisti verificati tramite OCR dei titoli ENTECA, prenotano consulenze/perizie, acquistano biglietti per webinar/eventi, leggono articoli guida ed acquistano materiali fonoassorbenti certificati. È collegato ad un'App Mobile per i professionisti usata durante i sopralluoghi sul campo per misurare il rumore ($dBA$/$RT60$), calcolare l'isolamento delle pareti, trascrivere note vocali ed inviare preventivi/relazioni diagnostiche in PDF in 3 minuti, incorporando il badge ed il link al profilo del professionista sul portale B2C. Solopreneur MVP build time: 10–12 giorni (6 giorni Web Portal + 3 giorni App Mobile + 2 giorni AI OCR & Voice + 1 giorno launch).
+
+### 33. 💡 EthoPedia AI: Il Portale di Riferimento B2C & Directory Verificata per Educazione Cinofila Avanzata, Comportamentismo Animale, Fisioterapia Veterinaria & Sport Cinofili
+- **Date Evaluated**: 2026-07-28
+- **Category**: Web App / B2C Reference Portal & Professional Marketplace Engine — *Educazione Cinofila, Comportamentismo, Fisioterapia Veterinaria & Sport Cinofili*
+- **Novelty**: Novel Combination & Unserved Niche Flank (Single-Player Professional Intake & Media Kit Widget + Directory B2C con verifica AI dei titoli ENCI/UNI 11790, Biglietteria Eventi/Stage/Webinar, Pubblicazione Articoli Scientifici e Vetrina Prodotti Curati, che affianca i portali generici di pet-sitting come Rover/Pawshake e le liste statiche delle associazioni)
+- **7-Proof Score**: 5/7
+- **Status**: **DISCARDED**
+- **Rejection Reason**: Direct user market verification confirmed that canine behavior and pet education is heavily crowded and protected by strict regulatory/institutional orders (ENCI/veterinary order licensing), creating high barriers to entry for an independent solopreneur portal.
+- **Detailed Report**: [ethopedia_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/ethopedia_evaluation_report.md)
+- **Blueprint Architecture**: [ethopedia_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/ethopedia_blueprint.md)
+- **Summary**: Portale di riferimento B2C e marketplace verticale per Educatori Cinofili (UNI 11790 / ENCI / FICSS), Veterinari Comportamentisti, Fisioterapisti Veterinari, Istruttori di Sport Cinofili (Agility, Nosework, Detection) e Centri Cinofili/ASD. Scartato a seguito della verifica diretta dell'utente che ha confermato l'affollamento del settore ed i vincoli normativi/associativi di categoria.
+
+### 34. 💡 LofiApothecary AI: Audio-Visual ASMR Soundscape Crafting & Cozy Nook Studio
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile Game (iOS & Android) — *Category E: Divertimento / Entertainment & Category G: Audio-Visual Micro-Utility*
+- **Novelty**: Novel Combination & Unserved Niche Flank (First Cozy Mobile Game blending Interactive Multi-Stem Audio Soundscape Alchemy, Tactile Botanical Tea/Apothecary Crafting, and Real-Time Live Activities / Dynamic Island Background Focus Engine)
+- **7-Proof Score**: 5/7
+- **Status**: **DISCARDED**
+- **Rejection Reason**: Direct user market verification confirmed that the mobile cozy game & tea/ambient simulation category is heavily saturated with high customer acquisition costs and low organic user retention margins.
+- **Detailed Report**: [lofiapothecary_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/lofiapothecary_evaluation_report.md)
+- **Summary**: Mobile cozy game and daily focus/sleep companion. Discarded after user market verification identified extreme store saturation and high UA competition in the cozy game category.
+
+### 35. 💡 CraftPedia AI: Il Portale di Riferimento B2C & Directory Verificata per Restauro d'Arte, Liuteria, Ebanisteria & Artigianato Storico d'Eccellenza
+- **Date Evaluated**: 2026-07-28
+- **Category**: Web App / B2C Reference Portal & Professional Marketplace Engine — *Restauro d'Arte, Liuteria, Ebanisteria & Artigianato Storico*
+- **Novelty**: Novel Combination & Unserved Niche Flank (Single-Player Professional Condition Report & Media Kit Widget + Directory B2C con verifica AI delle credenziali artigiane, Biglietteria Masterclass/Stage/Eventi, Pubblicazione Articoli/Casi Studio e Vetrina Prodotti/Materiali Specialistici, che affianca i portali vetrina generici come Wellmade e le liste burocratiche ministeriali)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [craftpedia_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/craftpedia_evaluation_report.md)
+- **Blueprint Architecture**: [craftpedia_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/craftpedia_blueprint.md)
+- **Summary**: Portale di riferimento B2C e marketplace verticale per Maestri Liutai, Restauratori d'Arte Privati (dipinti, sculture), Ebanisti d'Arte, Orologiai di pezzi d'epoca, Doratori e Restauratori di Vetrate Storiche. I clienti B2C (collezionisti d'arte, proprietari di antiquariato, musicisti, proprietari di dimore storiche) trovano maestri artigiani verificati tramite AI OCR delle credenziali di bottega, prenotano diagnosi/preventivi di restauro e perizie, si iscrivono a masterclass/stage dal vivo con biglietteria integrata Stripe Connect, consultano casi studio tecnici prima/dopo dettati a voce dagli artigiani al banco di lavoro, ed acquistano materiali specialistici (gommalacca, vernici d'epoca, pigmenti) od opere restaurate. 100% libero da ordini burocratici/statali di categoria. Guidato dal meccanismo Zero-CAC "CraftPedia Master Artisan Verified Badge" incorporabile nei siti ed Instagram delle botteghe. Solopreneur MVP build time: 10–12 giorni (5 giorni CRUD schede/masterclass/casi studio/vetrina + 2 giorni Stripe Connect ticketing + 2 giorni Vision OCR & Voice-to-Article + 3 giorni UI/UX e lancio).
+
+### 36. 💡 LuminaGlass AI: Tactile Stained Glass Crafting, Soldering & Ambient Light Caustics Studio
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile Game (iOS & Android) / PC (Steam & WebGL) — *Category E: Divertimento / Entertainment & Category G: Audio-Visual Micro-Utility*
+- **Novelty**: Novel Combination & Unserved Niche Flank (First Cozy Mobile/PC Simulator blending Tactile Glass Scoring/Fracture Physics, Copper-Foiling & Solder-Melting Mechanics, and Real-Time Raytraced Light Caustics with an Interactive Desk Ambient Light & Sound Companion)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [luminaglass_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/luminaglass_evaluation_report.md)
+- **Blueprint Architecture**: [luminaglass_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/luminaglass_blueprint.md)
+- **Summary**: Simulator cozy tactile e puzzle creativo dedicato all'arte delle vetrate artistiche (stained glass). Il giocatore incide le lastre di vetro seguendo le linee guida di taglio (spline physics), intaglia e stacca i tasselli colorati, applica il nastro in rame (copper tape) e fonde le linee di saldatura a stagno con il saldatore a punta calda. Una volta completato il lavoro, l'opera viene montata su una cornice in legno esposta alla luce del sole, attivando uno shader GLSL di rifrazione e caustiche luminose in tempo reale che proietta fasci di luce colorata e paesaggi sonori lofi/ambient sullo schermo (funzionando anche come Desk Clock & Sound Companion). Include una campagna Cozy Shop con 40+ ordini di clienti e storie di vita, un generatore procedurale di ordini ed una modalità Sandbox illimitata. Solopreneur MVP build time: 10–12 giorni (5 giorni fisica taglio/saldatura + 3 giorni shader caustiche + 2 giorni negozio/ordini + 2 giorni UI/lancio).
+
+
+
+
 
 
 
