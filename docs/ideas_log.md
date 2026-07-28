@@ -6,8 +6,8 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 26
-- **Approved**: 22
+- **Total Ideas Evaluated**: 27
+- **Approved**: 23
 - **Pivot Required**: 3
 - **Discarded**: 1
 
@@ -250,4 +250,15 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [shoptally_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/shoptally_evaluation_report.md)
 - **Blueprint Architecture**: [shoptally_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/shoptally_blueprint.md)
 - **Summary**: Mobile app for independent mystery shoppers registered with many Mystery Shopping Companies (MSCs) at once. Tracks fee + reimbursement + deadline + approval/payment status per shop across all companies in one ledger, pushes deadline-miss warnings (a real, cited financial risk in this niche), and optionally uses an LLM to parse forwarded MSC confirmation emails into structured entries (manual fallback always available). Deterministic CRUD core; AI is a convenience layer only. Chosen after screening and discarding ~12 other simple-app candidates (co-parenting expense splitter, vending-machine route tracker, freelance scope-creep billing, vacation-home cost splitter, pickup-sports fee splitter, cottage-food recipe pricing, hobby-farm feed calculator, neighbor tool-lending tracker, family car scheduler, favor/IOU tracker, Christmas-light install quoting, junk-removal quoting, mobile-notary tracker, farmers-market vendor tracker) that all turned out to have direct, well-established prior art during Step 2 screening — logged here for context, not as scored entries since they didn't reach the full 7-proof stage. Solopreneur MVP build time: 9-11 days (5-6 days core CRUD + 2-3 days AI extraction + 2 days auth/launch).
+
+### 27. 💡 RigCheck AI: Mobile OSHA & ASME B30.9 Rigging Hardware Inspection Ledger & Discard Certificate Vault
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile App (iOS & Android) — *Category C: Tools per Professionisti & B2B Mobile (Non-Sensor, Rotation Gate Compliant)*
+- **Novelty**: Unserved Niche Flank (Mobile-First Standalone Inspection & OCR Tagging Vault for Independent Rigger-Inspectors, Flanking $500+/mo Enterprise Fleet Software like Bexel/CoreInspection, Proprietary RFID Hardware Portals like Konecranes/Crosby, and Manual Excel/Paper Workarounds)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [rigcheck_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/rigcheck_evaluation_report.md)
+- **Blueprint Architecture**: [rigcheck_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/rigcheck_blueprint.md)
+- **Summary**: Standalone offline-first mobile app for independent certified rigging inspectors, rigger-signalpersons, and site safety managers. Uses on-device camera OCR (Apple VisionKit / Google ML Kit) to parse stamped metal serial numbers and Working Load Limit (WLL) tags from slings (alloy chain, wire rope, synthetic web/round) and hardware (shackles, hooks, eyebolts), applies deterministic ASME B30.9 / OSHA 1910.184 discard decision trees, and generates 1-tap signed cryptographic PDF audit reports with GPS tagging. Deliberately chosen after screening ~25 other mobile app niches (subcontractor lien waivers, backflow preventer testing, fire extinguisher inspection, stage plot generators, landed cost calculators, food truck temp logs, event rental dropoff signoffs, tank mix spray calculators, pressure washing soft-wash logs, well yield flow rate calculators, truck axle weight calculators, commercial tire torque specs, pet grooming matted coat waivers, kitchen hood cleaning NFPA 96 logs, RV pre-purchase inspection apps, auto detailing paint damage logs, beekeeping apiary logs, micro-distillery proofing calculators, marine mechanic outboard winterization logs, grease trap FOG manifests, microblading PMU pigment logs, marine canvas yardage estimators, fire damper NFPA 80 logs) that all turned out to have established mobile prior art during Step 2 screening. Solopreneur MVP build time: 7–9 days (5 days core CRUD/tables + 2 days PDF generator + 2 days VisionKit OCR tag scanner & UI polish).
+
 
