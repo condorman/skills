@@ -1,11 +1,11 @@
 ---
 name: idea-discovery
-description: Guide the user in discovering, evaluating, and filtering original and unprecedented product or business ideas across Web, Mobile, Services, AI, and Social contexts. Performs deep research using organic search dorks, manual workaround mining, social networks, freelance job boards, and specialized portals; verifies absolute novelty via prior-art checks; evaluates competitor strength and user complaints; applies a strict 5-Proof Anti-False-Positive verification protocol (Willingness to Pay, Zero-CAC Distribution, Anti-Churn Retention, AI Reliability, Micro-Moat); verifies single-person + AI feasibility and zero legal/regulatory barriers; defines monetization strategies; and maintains a memory log of evaluated ideas. Use whenever the user asks for new project ideas, startup concepts, micro-SaaS opportunities, side project validation, or market research for new products, even if they just ask "what should I build next?".
+description: Guide the user in discovering, researching, evaluating, and architecting original product ideas across Web, Mobile Apps, B2B Micro-SaaS, Games, and AI Tools. Executes vertical Google Dork search matrices, patent searches, mechanics-first prior-art audits, and the strict 6-Proof Verification Protocol (Willingness to Pay & Demand Velocity, Zero-CAC Distribution, Anti-Churn Retention, AI Reliability >95%, Micro-Moat Defensibility, and Status Quo Resistance). Automatically updates docs/ideas_log.md and generates docs/<idea_slug>_blueprint.md for approved concepts. Use whenever the user asks for project ideas, startup concepts, micro-SaaS opportunities, mobile app ideas, game concepts, product validation, market research, or asks "what should I build next?", "cerca nuove app", "valuta questa idea", or runs /idea-discovery.
 ---
 
-# Original Idea Discovery & Anti-False-Positive Evaluation Skill
+# Original Idea Discovery & Anti-False-Positive Evaluation Skill (v4.0)
 
-This skill provides an advanced methodology to discover, research, and evaluate **original, highly innovative, and unprecedented product ideas** (Web, Mobile, Micro-Services, AI Tools, Social/Community Apps). It eliminates **false positives** by subjecting every candidate concept to a rigorous **5-Proof Verification Protocol** (Willingness to Pay, Zero-CAC Distribution, Anti-Churn Frequency, AI Reliability, and Micro-Moat Defensibility).
+This skill provides an advanced methodology to discover, research, evaluate, and architect **original, highly innovative, and unprecedented product ideas** (Web, Mobile Apps, B2B Micro-SaaS, AI Tools, Games). It eliminates **false positives** by subjecting every candidate concept to a rigorous **6-Proof Verification Protocol** (Willingness to Pay & Demand Velocity, Zero-CAC Distribution, Anti-Churn Frequency, AI Technical Reliability, Micro-Moat Defensibility, and Status Quo Resistance).
 
 ---
 
@@ -23,31 +23,39 @@ This skill provides an advanced methodology to discover, research, and evaluate 
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 2. Prior-Art & Novelty Audit (3-Pass Search)            │
- │    - Prove idea is unprecedented or solve why past failed│
+ │ 2. Prior-Art & Novelty Audit (5-Pass Search Protocol)   │
+ │    - Run scripts/deep_search_miner.py                    │
+ │    - Mechanics-First Isolation + Patent & Store Search  │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 3. Anti-False-Positive 5-Proof Verification Protocol   │
- │    1. Proof of Willingness to Pay (WTP)                 │
+ │ 3. Anti-False-Positive 6-Proof Verification Protocol   │
+ │    1. Proof of Willingness to Pay & Demand Velocity     │
  │    2. Proof of Zero-CAC Organic Distribution            │
  │    3. Proof of High Frequency & Retention (Anti-Churn)  │
  │    4. Proof of AI Technical Reliability (>95% Accuracy) │
  │    5. Proof of Micro-Moat Defensibility                 │
+ │    6. Proof of Status Quo Resistance (Non-Software)    │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 4. Strict Qualification Filters                         │
+ │ 4. Strict Qualification & Domain Directive Gates        │
  │    - Solopreneur + AI Feasibility Gate ("Why Now?")    │
  │    - Legal & Regulatory Safety Check                    │
+ │    - Consult domain_games.md / domain_saas.md / mobile  │
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 5. Idea Pitch & Detailed Evaluation Report              │
+ │ 5. Standardized Evaluation Report (Feature Delta Matrix)│
  └────────────────────────────┬────────────────────────────┘
                               │
  ┌────────────────────────────▼────────────────────────────┐
- │ 6. Memory Log Update (Update memory/ideas_log.md)       │
+ │ 6. Memory Log Update (Update docs/ideas_log.md)         │
+ └────────────────────────────┬────────────────────────────┘
+                              │
+ ┌────────────────────────────▼────────────────────────────┐
+ │ 7. Blueprint Generation (docs/<idea>_blueprint.md)      │
+ │    (Mandatory for APPROVED 6/6 ideas)                   │
  └─────────────────────────────────────────────────────────┘
 ```
 
@@ -55,16 +63,17 @@ This skill provides an advanced methodology to discover, research, and evaluate 
 
 ## Output Directory Rule
 
-**MANDATORY**: ALL output files generated by this skill (including `evaluation_report.md`, `ideas_log.md`, and project blueprints) MUST be saved in a `docs/` subdirectory inside the target project directory specified in the prompt (e.g., `<target_project>/docs/evaluation_report.md`, `<target_project>/docs/ideas_log.md`).
+**MANDATORY**: ALL output files generated by this skill (including `evaluation_report.md`, `ideas_log.md`, and `<idea>_blueprint.md`) MUST be saved in a `docs/` subdirectory inside the target project directory specified in the prompt (e.g., `<target_project>/docs/evaluation_report.md`).
 If no target project path is specified by the user, default to `<workspace_root>/docs/`.
 
 ---
 
-## Step 0: Check Memory Log
+## Step 0: Check Memory Log & Sensor Diversity Gate
 
 1. Read `<target_project>/docs/ideas_log.md` (or workspace `<workspace_root>/docs/ideas_log.md`).
-2. Check all previously recorded **APPROVED** and **DISCARDED** ideas.
-3. **DO NOT** re-propose or re-analyze concepts already marked as DISCARDED unless specifically instructed.
+2. Check all previously recorded **APPROVED**, **PIVOT REQUIRED**, and **DISCARDED** ideas.
+3. **DO NOT** re-propose or re-analyze concepts already recorded unless specifically instructed.
+4. **Enforce Sensor & Category Diversity Gate**: Inspect the last 3 mobile app entries in `ideas_log.md`. If 2+ recent entries belong to the same hardware sensor (e.g. Audio FFT / Spectrogram), **DO NOT propose another audio app**. You MUST rotate strictly to another hardware vertical (Optical/Vision, BLE/UWB, Motion/Biometrics, Micro-Location, or File Utility).
 
 ---
 
@@ -73,9 +82,9 @@ If no target project path is specified by the user, default to `<workspace_root>
 Consult `references/sources.md` for specific Google Dorks, queries, and investigation platforms.
 
 Focus discovery on **three pillars**:
-1. **Unserved Friction & Hacky Workarounds**: Search for people combining 3+ tools, writing custom scripts, or complaining about spending hours on manual Excel/browser tasks.
-2. **Freelance Job Board Pain Points**: Search Upwork/Fiverr job posts for recurring custom automation requests that companies pay $500–$2,000 to solve.
-3. **"Why Now?" Technological Enablers**: Identify recent AI model releases (multimodal vision, open-source LLMs, browser agents, real-time voice APIs) that enable a 1-person micro-SaaS to solve a problem that was technically impossible or economically infeasible 6 months ago.
+1. **Unserved Friction & Hacky Workarounds**: Search for people combining 3+ tools, writing custom scripts, or complaining about manual Excel/browser tasks.
+2. **Freelance Job Board Pain Points**: Search Upwork/Fiverr job posts for recurring custom automation requests ($300–$2,000 budget).
+3. **"Why Now?" Technological Enablers**: Identify recent AI model releases (multimodal vision, open-source LLMs, spatial audio, browser agents) that enable a 1-person micro-SaaS or app to solve a problem that was technically impossible or economically infeasible 6 months ago.
 
 ---
 
@@ -83,9 +92,9 @@ Focus discovery on **three pillars**:
 
 Consult `references/deep_search_playbook.md` for vertical Dorks, mechanics-first isolation, patent registries, and Asian market queries.
 
-Before starting search execution, run the search payload miner script:
+Before starting search execution, run the search payload miner helper script:
 ```bash
-python scripts/deep_search_miner.py "<core_mechanics_term>"
+python scripts/deep_search_miner.py "<core_mechanics_terms>"
 ```
 
 Run a **5-pass verification search**:
@@ -108,10 +117,10 @@ Consult `references/evaluation_framework.md` for complete guidelines and scoring
 Every candidate idea MUST be evaluated against all 6 Proofs:
 
 1. **Proof 1: Willingness to Pay & Demand Velocity (WTP & Trends)**: Prove that users or companies are currently spending real money (on freelancers, competitor software, or manual workarounds) AND search volume momentum is rising/active.
-2. **Proof 2: Zero-CAC Organic Distribution**: Identify a specific, unpaid organic channel (Chrome Web Store SEO, pSEO, template marketplace, active niche community) to acquire users without paid ads.
+2. **Proof 2: Zero-CAC Organic Distribution**: Identify a specific, unpaid organic channel (Chrome Web Store SEO, pSEO, template marketplace, active niche community, viral short-form video) to acquire users without paid ads.
 3. **Proof 3: High Frequency & Retention (Anti-Churn)**: Ensure the tool solves a daily or weekly recurring task—not a one-time utility.
 4. **Proof 4: AI Technical Reliability**: Verify that the AI pipeline achieves >95% accuracy without requiring human-in-the-loop debugging or overwhelming 1 person with support tickets.
-5. **Proof 5: Micro-Moat Defensibility**: Define a unique advantage (niche prompt workflow, complex API integrations, SEO lock-in) that prevents instant 1-day cloning by generic AI wrappers.
+5. **Proof 5: Micro-Moat Defensibility**: Define a unique advantage (niche prompt workflow, complex API integrations, SEO lock-in, spatial audio calibration) that prevents instant 1-day cloning by generic AI wrappers.
 6. **Proof 6: Status Quo Resistance (Non-Software Substitute Test)**: Prove that the app saves >2 hours/week or $200+/month compared to free human inertia (paper, spreadsheet, pinned WhatsApp message).
 
 **Scoring**:
@@ -121,13 +130,12 @@ Every candidate idea MUST be evaluated against all 6 Proofs:
 
 ---
 
-## Step 4: Strict Qualification Filters
+## Step 4: Qualification & Domain-Specific Directives
 
-- **Solopreneur + AI Feasibility Gate**: Must be buildable, operate-able, and supportable by 1 person with AI tools.
-- **Zero / Ultra-Low Legal Risk Gate**: Absolute independence from regulatory bodies (FDA, SEC, FINRA, MiCA), medical advice, gambling, or legal consultation requirements.
-- **Game Ideas Directive (Mandatory for Gaming Concepts)**:
-  - **DO NOT** propose "daily-only" micro-games by default (where the user plays once a day for 2 minutes and cannot play again).
-  - **ALWAYS PRIORITIZE** games with **High Organic Virality** (mechanics that generate clip-worthy TikTok/Reels/Shorts visuals or social challenges) AND **Multi-Session Replayability** (endless modes, roguelite progression, physics merge loops, or instant retry mechanics that encourage playing multiple times a day).
+Load the relevant domain reference file based on the concept type:
+- For **Game Concepts**: Consult [domain_games.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_games.md) (Multi-session replayability, virality loops, endless modes).
+- For **B2B SaaS / Web Apps**: Consult [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md) (API integrations, compliance churn <2%, freelancer WTP).
+- For **Mobile Apps**: Consult [domain_mobile.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_mobile.md) (Explores 7 broad functional categories: Strumenti di Calcolo, Gestionali & Micro-CRM, Tools per Professionisti, Social & Community, Divertimento/Entertainment, Editoriali/Contenuti, Hardware/Sensori. Enforces Category Rotation Gate).
 
 ---
 
@@ -200,10 +208,23 @@ Update `<target_project>/docs/ideas_log.md` with every analyzed idea (both Appro
 
 ---
 
+## Step 7: Technical Architecture Blueprint Generation (MANDATORY for APPROVED 6/6 Ideas)
+
+For every concept that achieves an **APPROVED (6/6)** rating, consult [blueprint_template.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/blueprint_template.md) and automatically generate `<target_project>/docs/<idea_slug>_blueprint.md` containing:
+1. System Architecture Diagram (Mermaid).
+2. Database DDL Schema (Postgres / Supabase SQL).
+3. Core API Endpoints & Data Contracts.
+4. UI/UX Screen Hierarchy & Color Tokens.
+5. Day 1 - Day 14 Solopreneur MVP Implementation Roadmap.
+
+---
+
 ## References
 
 - [sources.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/sources.md): Deep research search operators, portals, marketplaces, and dorks.
 - [deep_search_playbook.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/deep_search_playbook.md): Vertical search Dorks, Mechanics-First isolation, Asian market queries, Patent search, Status Quo inertia test, Feature Delta Matrix, and Evidence Audit Log rules.
 - [evaluation_framework.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/evaluation_framework.md): Detailed 6-Proof verification protocol against false positives.
-
-
+- [domain_games.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_games.md): Directives for gaming concepts.
+- [domain_saas.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_saas.md): Directives for B2B SaaS and developer tools.
+- [domain_mobile.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/domain_mobile.md): Directives for iOS/Android native app capabilities.
+- [blueprint_template.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/.agents/skills/idea-discovery/references/blueprint_template.md): Architecture blueprint template for approved ideas.
