@@ -6,8 +6,8 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 31
-- **Approved**: 27
+- **Total Ideas Evaluated**: 32
+- **Approved**: 28
 - **Pivot Required**: 3
 - **Discarded**: 1
 
@@ -300,6 +300,17 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [carepedia_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/carepedia_evaluation_report.md)
 - **Blueprint Architecture**: [carepedia_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/carepedia_blueprint.md)
 - **Summary**: Portale di riferimento B2C e marketplace verticale per professionisti (Ostetriche, Nutrizionisti Funzionali, Consulenti IBCLC, Osteopati Perinatali, Posturologi) e Società/Studi Medici Associati. Consente l'inserimento della scheda professionale verificata tramite AI OCR dei titoli, la promozione dei servizi di consulenza, la segnalazione ed iscrizione a eventi/seminari/webinar con biglietteria integrata Stripe Connect, la pubblicazione di articoli scientifici e la vendita/raccomandazione di prodotti ed e-book. Guidato dal meccanismo Zero-CAC "Verified Expert Badge & Media Kit Widget" incorporabile nel sito dei professionisti. Solopreneur MVP build time: 10–12 giorni (6 giorni CRUD schede/eventi/articoli/prodotti + 2 giorni Stripe Connect ticketing + 2 giorni OCR & AI Voice-to-Article + 2 giorni UI/UX e lancio).
+
+### 32. 💡 AcoustiPedia AI: Il Portale di Riferimento B2C & Mobile Field Toolkit per Insonorizzazione, Acustica Edile & Bonifica Rumore
+- **Date Evaluated**: 2026-07-28
+- **Category**: Web App B2C Reference Portal & Marketplace Engine + Connected Mobile Field App (iOS & Android) — *Insonorizzazione, Acustica Edile & Ambientale*
+- **Novelty**: Novel Combination & Unserved Niche Flank (Single-Player Mobile Field Acoustic Calculator & Quote Generator + B2C Directory con verifica AI dei Tecnici Competenti in Acustica - TCA, Biglietteria Eventi/Webinar, Pubblicazioni Tecniche e Vetrina Prodotti Fonoassorbenti)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [acoustipedia_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/acoustipedia_evaluation_report.md)
+- **Blueprint Architecture**: [acoustipedia_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/acoustipedia_blueprint.md)
+- **Summary**: Portale di riferimento B2C e marketplace verticale per Tecnici Competenti in Acustica (TCA), Ingegneri/Architetti Acustici ed Imprese di Insonorizzazione. Gli utenti B2C (proprietari di case, locali, uffici) trovano professionisti verificati tramite OCR dei titoli ENTECA, prenotano consulenze/perizie, acquistano biglietti per webinar/eventi, leggono articoli guida ed acquistano materiali fonoassorbenti certificati. È collegato ad un'App Mobile per i professionisti usata durante i sopralluoghi sul campo per misurare il rumore ($dBA$/$RT60$), calcolare l'isolamento delle pareti, trascrivere note vocali ed inviare preventivi/relazioni diagnostiche in PDF in 3 minuti, incorporando il badge ed il link al profilo del professionista sul portale B2C. Solopreneur MVP build time: 10–12 giorni (6 giorni Web Portal + 3 giorni App Mobile + 2 giorni AI OCR & Voice + 1 giorno launch).
+
 
 
 
