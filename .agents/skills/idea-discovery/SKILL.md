@@ -227,6 +227,8 @@ Update `<target_project>/docs/ideas_log.md` with every analyzed idea (both Appro
 3. Update the **Log Summary** counts (Total / Approved / Pivot Required / Discarded) at the top of the file to match reality after the append.
 4. If you're unsure the count is reliable (e.g. the log was hand-edited), it's safer to drop the numeric prefix for that entry entirely than to guess and collide with an existing number — a heading without a number is harmless; two headings with the same number breaks anything that references "entry #N" later.
 
+**Keep the log's Summary bullet scannable**: the log's whole purpose is to be quickly skimmable in a future Step 0 check — that only works if each entry's summary stays a few sentences. If Step 1/2 screening ruled out many candidate niches before landing on this one (which is a good sign of rigor, not a problem), don't dump the full list into the Summary bullet — name the 2-3 closest alternatives that were seriously considered and why they lost out, and leave the rest implicit. The full screening trail belongs in the evaluation report's Section 3 (Novelty & Prior-Art Verification), not in the one-line log entry.
+
 ---
 
 ## Step 7: Technical Architecture Blueprint Generation (MANDATORY for APPROVED 7/7 Ideas)

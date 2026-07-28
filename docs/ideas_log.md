@@ -1,13 +1,13 @@
 # Master Product Ideas Log
 
-This log tracks all product ideas discovered, evaluated, and scored using the `idea-discovery` 5-Proof Verification Protocol.
+This log tracks all product ideas discovered, evaluated, and scored using the `idea-discovery` skill's verification protocol. The protocol has evolved over time (6-Proof, now 7-Proof) — check each entry's own recorded score rather than assuming a fixed proof count. Entries scored before Proof 7 (True Solopreneur Buildability) or the Calibration guidance existed should be treated as unverified against current rigor if revisited, not as still-settled.
 
 ---
 
 ## Log Summary
 
-- **Total Ideas Evaluated**: 27
-- **Approved**: 23
+- **Total Ideas Evaluated**: 30
+- **Approved**: 26
 - **Pivot Required**: 3
 - **Discarded**: 1
 
@@ -260,5 +260,38 @@ This log tracks all product ideas discovered, evaluated, and scored using the `i
 - **Detailed Report**: [rigcheck_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/rigcheck_evaluation_report.md)
 - **Blueprint Architecture**: [rigcheck_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/rigcheck_blueprint.md)
 - **Summary**: Standalone offline-first mobile app for independent certified rigging inspectors, rigger-signalpersons, and site safety managers. Uses on-device camera OCR (Apple VisionKit / Google ML Kit) to parse stamped metal serial numbers and Working Load Limit (WLL) tags from slings (alloy chain, wire rope, synthetic web/round) and hardware (shackles, hooks, eyebolts), applies deterministic ASME B30.9 / OSHA 1910.184 discard decision trees, and generates 1-tap signed cryptographic PDF audit reports with GPS tagging. Deliberately chosen after screening ~25 other mobile app niches (subcontractor lien waivers, backflow preventer testing, fire extinguisher inspection, stage plot generators, landed cost calculators, food truck temp logs, event rental dropoff signoffs, tank mix spray calculators, pressure washing soft-wash logs, well yield flow rate calculators, truck axle weight calculators, commercial tire torque specs, pet grooming matted coat waivers, kitchen hood cleaning NFPA 96 logs, RV pre-purchase inspection apps, auto detailing paint damage logs, beekeeping apiary logs, micro-distillery proofing calculators, marine mechanic outboard winterization logs, grease trap FOG manifests, microblading PMU pigment logs, marine canvas yardage estimators, fire damper NFPA 80 logs) that all turned out to have established mobile prior art during Step 2 screening. Solopreneur MVP build time: 7–9 days (5 days core CRUD/tables + 2 days PDF generator + 2 days VisionKit OCR tag scanner & UI polish).
+
+### 28. 💡 UpholsteryCut: Mobile Furniture Re-Upholstery Yardage, Foam Density & Cushion Cut Calculator
+- **Date Evaluated**: 2026-07-28
+- **Category**: Mobile App (iOS & Android) — *Category A: Strumenti di Calcolo & Category B: Gestionali & Micro-Productivity (Non-Sensor, Rotation Gate Compliant)*
+- **Novelty**: Unserved Niche Flank (Lightweight mobile-first 3D cushion volume, welting/piping cord math, pattern repeat multiplier & foam compression ILD estimator, flanking generic 2D dressmaking/sewing apps like SewCalc and manual cheat-sheet paper workarounds used by furniture upholsterers, boat seat restorers, and auto trimmers)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [upholsterycut_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/upholsterycut_evaluation_report.md)
+- **Blueprint Architecture**: [upholsterycut_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/upholsterycut_blueprint.md)
+- **Summary**: Offline-first mobile app for independent furniture upholsterers, marine canvas shops, auto trimmers, and DIY restorers. Calculates 3D box cushion plates, boxing strips, welt cord yardage, seam allowances, and pattern repeat offsets (stripes, plaids, florals on 54" fabric rolls), selects foam density/ILD firmness, and exports 1-tap PDF cut-lists and client quotes. Deliberately chosen after screening ~30 other candidate app niches (notary journals, distillery hydrometer calculators, fire damper logs, retaining wall calculators, food truck temp logs, backflow preventer logs, stage plot generators, agricultural spray calculators, kitchen hood cleaning logs, RV inspection apps, draft line flush logs, cottage food calculators, well yield flow logs, microblading PMU logs, DMX dip-switch calculators, fire extinguisher tagging, pressure washing soft-wash calculators, beekeeping apiary logs, grease trap manifests, scaffolding load calculators, marine canvas estimators, pottery kiln logs, subcontractor retainage ledgers, bridle tension calculators, reef aquarium dosing calculators, AV cable pinout ledgers, landed cost calculators, coffee roast logs, EPA 608 leak rate logs, window tint cut optimizers, wireless frequency intermod calculators, optical fiber splice loss calculators, acoustic STC wall calculators, mead maker calculators, hydroseeding slurry calculators) that all turned out to have direct mobile prior art during Step 2 screening. Solopreneur MVP build time: 7–9 days (5 days core 3D cushion math engine & frame presets + 2 days PDF quote exporter + 2 days UI polish).
+
+### 29. 💡 PODGuard AI: Multimodal Vision POD & BOL Handwritten Exception Auditor for Freight Brokers
+- **Date Evaluated**: 2026-07-28
+- **Category**: B2B Micro-SaaS / Web App & Webhook Integration — *Freight & Logistics Operations (Non-Payment, Rotation Gate Compliant)*
+- **Novelty**: Unserved Niche Flank (Lightweight $39–$89/mo Multimodal Vision Exception Auditor Flanking Enterprise IDP Platforms like Veryfi/Klippa at $500+/mo and Barebones TMS PDF Storage Modules)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [podguard_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/podguard_evaluation_report.md)
+- **Blueprint Architecture**: [podguard_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/podguard_blueprint.md)
+- **Summary**: Lightweight self-serve B2B Micro-SaaS for independent freight brokers, dispatchers, and 3PL ops teams. Connects via email forwarding or Zapier webhooks to process scanned PDF Proof of Delivery (POD) and Bill of Lading (BOL) documents. Uses multimodal vision (GPT-4o / Claude 3.5 Sonnet) to detect handwritten receiver damage, short-shipment, or refusal notes scribbled on paper PODs, crops the exact handwritten ink region for 1-click dashboard overlay review, and auto-generates Carmack Amendment freight claim PDF packets before carrier payment deadlines lapse. Deliberately chosen after screening ~15 candidate B2B SaaS verticals (resale tax exemption vaults, vendor COI expiration trackers, subcontractor progress payment lien waivers, SaaS affiliate refund clawback webhooks, SLA downtime credit note logging, white-label scope signoff portals) to ensure full Workflow Rotation compliance. Solopreneur MVP build time: 6–8 days (4 days Next.js dashboard/Supabase auth + 2 days Vision LLM extraction pipeline + 2 days Zapier/email parser & PDF exporter).
+
+### 30. 💡 CertiMach AI: The Vertical B2B Reference Portal & Credential Vault for Industrial Machinery Safety & CE Compliance Experts
+- **Date Evaluated**: 2026-07-28
+- **Category**: Web App / B2B Vertical Professional Network & Marketplace Engine — *Industrial Compliance & Engineering Services*
+- **Novelty**: Unserved Niche Flank (Vertical B2B Single-Player Utility + Verified Professional Directory, Events/Seminars, Technical Whitepapers & Engineering Calculation Templates Store for EU Machinery Safety Consultants, flanking static blog listicles like Compliance Gate and generic unverified directories like QHSE Directory)
+- **7-Proof Score**: 7/7
+- **Status**: **APPROVED**
+- **Detailed Report**: [certimach_evaluation_report.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/certimach_evaluation_report.md)
+- **Blueprint Architecture**: [certimach_blueprint.md](file:///Users/alessandromizzoni/Documents/Progetti/skills/docs/certimach_blueprint.md)
+- **Summary**: Vertical B2B reference portal and credential engine for certified machinery safety engineers (CMSE, ISO 13849/ATEX auditors, CE marking specialists) and engineering consultancies. Features verified profile listings with AI OCR certificate validation, RFP scope matching for OEMs preparing for the January 20, 2027 EU Machinery Regulation 2023/1230 deadline, native webinar/course ticketing, technical whitepaper hosting, and a digital store for SISTEMA safety libraries & Excel risk assessment templates. Driven by a single-player embeddable "CE Verification Badge & Media Kit Widget" that gives consultants zero-CAC organic distribution whenever they send client proposals. Solopreneur MVP build time: 10–12 days (6 days core CRUD + 2 days Stripe Connect + 2 days Vision OCR certificate scanner & embeddable badge widget + 2 days launch polish).
+
+
+
 
 
